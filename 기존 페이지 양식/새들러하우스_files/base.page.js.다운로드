@@ -1,0 +1,1 @@
+$(function(){$('#btn_back').click(function(e){e.preventDefault();history.back();});});function u_alert(content,title){if(title==undefined){var jc=$.alert({title:'',content:content,autoClose:'ok|200000',});jc.buttons.ok.text='닫기';console.log(jc);}else{var jc=$.alert({title:title,content:content,autoClose:'ok|200000',});jc.buttons.ok.text='닫기';console.log(jc);}}

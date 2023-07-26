@@ -1,0 +1,148 @@
+내 깃 : https://github.com/goodppoi
+깃 설치하기
+
+https://git-scm.com/download/win
+ -> 64-bit Git for Windows Setup. 클릭
+
+ -> 학원, 본인 컴퓨터에 설치하기
+
+- 교안 url
+https://leeeungyoung.github.io/
+
+- 비주얼스튜디오 코드
+ ->  ctrl + `  : 터미널 열기
+
+=깃, 문서 버전 관리 프로그램=
+
+a-1.txt
+a-2.txt
+a-final.txt 
+
+작업트리 ( 로컬 : 작업공간=폴더) ->  스테이지로 올려줌. 스테이징.
+
+a.txt 
+ ->          스테이지 :(스테이징) git add "파일명"
+                   -> 저장소(버전을 만들어 저장하는 곳): (커밋) git commit -m "커밋 메세지"
+
+깃허브(원격저장소)에 연결하기
+- 깃허브에 리포지토리를 만들기
+
+****************페이퍼 와이어프레임, 페르소나, 포트폴리오 시안디자인 결과물 7/24 제출*********
+
+*페이지 제작과정
+1. 기획 : 주제를 정하고 정보 수집
+-> 정보 구조화 (GNB)
+ : 카테고리를 만들고 정보의 종류를 분류
+-> 색상 선정, 글꼴 선정, 전체적인 레이아웃 형태(초안 :페이퍼 와이어프레임, 동종업계를 참조 또는 벤치마킹)
+
+
+
+  ※색상 선정 시, 
+   ===> 메인컬러 : 1색, 보조색 1색, 포인트 1색
+
+https://colorhunt.co/ 
+http://color.adobe.com/
+-> 색상 조합 사이트, 색상 톤앤매너 맞출때 참고할 사이트
+
+2. 페이퍼 와이어프레임 제작
+: 그리드 시스템 설정
+ - PC버전 : 12컬럼
+ - 모바일 버전 :  6컬럼 또는 8컬럼
+
+3. 시안 제작(포토샵 or 일러)
+
+4. 코딩 : HTML -> CSS -> 기능 코딩(css 애니메이션, 자바스크립트)
+
+
+
+* 첫 번째 포트폴리오
+- 6/30 ~ 7/9(일): 기획 
+ -> 주제 설정 및 레퍼런스(동종업계 사이트 URL파악 등) 수집, 자료 수집(이미지 텍스트 동영상 등)
+- 7/10(월)~7/16(일) : 디자인
+- 7/17(월)~ 7/19(수) : 디자인 피드백
+ -> 신동은, 7/17 피드백!!!
+- 7/23 까지  디자인 작업 완료!!
+- 7/24(월)~7/30(일) : HTML, CSS코딩
+
+
+해상도 : 1280 가로 크기로 수정
+
+----------------------------------------
+리뉴얼 페이지 선정하기
+-----------------------------------------
+새들러하우스 (와플카페)
+https://saddler.haus/-v2/feed
+
+1. 효창동 삼정카페
+http://samjung_cafe.jalib.site/
+2. 시청 리에제 와플
+https://liegewaffle.modoo.at/?link=4lrrcu15
+3. 빠뜨릭스 와플
+https://www.siksinhot.com/P/53007
+
+메뉴 소개 페이지
+와플세트 17,700
+페스츄리 바게트 6,900~10,800
+새들러슈페너 6,500
+호지티라떼 6,500
+크림 치즈 2,800~3,200
++메뉴판이미지
+
+
+온라인 마켓
+컬리 : https://www.kurly.com/goods/1000117648
+쿠팡 : https://www.coupang.com/vp/products/7124504484?itemId=17846360813&vendorItemId=85009864425&pickType=COU_PICK&q=%EC%83%88%EB%93%A4%EB%9F%AC%ED%95%98%EC%9A%B0%EC%8A%A4&itemsCount=36&searchId=857e14f0906945a78893f5d0ff8a963d&rank=1&isAddedCart=
+
+인스타 270
+ 
+동영상 1040*550
+https://youtu.be/p5YMi2YE82U
+
+블로그 썸네일 200*120
+https://blog.naver.com/kkikkikim/223035581640
+https://blog.naver.com/gyrudp/223074117030
+https://blog.naver.com/bhj0691/222990345592
+
+리뷰 1100*520
+
+컬러
+https://colorhunt.co/palette/000000cf0a0adc5f00eeeeee
+
+---------------------------------------------------
+
+헤더
+
+ 1. 푸터에 있는 홈, 예약, 주문내역, 장바구니 버튼 옮기기
+
+★온라인마켓 주소 
+스마트스토어 : https://smartstore.naver.com/saddlerhaus/products/8740878204
+쿠팡 : https://www.coupang.com/vp/products/7124504484?itemId=17846360813&vendorItemId=85009864425&src=1191000&spec=10999999&addtag=400&ctag=7124504484&lptag=CFM62832750&itime=20230711104324&pageType=PRODUCT&pageValue=7124504484&wPcid=16855150954945212583391&wRef=l.instagram.com&wTime=20230711104324&redirect=landing&mcid=a707eccfa7df4a21b76600bbe9f0f56c&sharesource=sharebutton&style=&isshortened=Y&settlement=N&isAddedCart=
+컬리 : https://www.kurly.com/goods/1000117648
+현대식품관 : https://tohome.thehyundai.com/front/pd/pdd/productDetail.do?slitmCd=S02301147552
+
+메인
+
+ 1. 와플사진으로 메인이미지 교체
+
+ 2. 전국 지점안내  
+   +   메뉴, 운영시간 추가
+
+ 3. 인스타그램 테이블 이미지 추가
+새들러 컴퍼니 : https://www.instagram.com/saddlerseoul/
+서울 : https://www.instagram.com/saddlerhaus_bakery/
+제주 : https://www.instagram.com/saddlerhaus_bakery/
+
+ 4. 리뷰 오픈페이지 추가
+https://pcmap.place.naver.com/restaurant/38328122/review/ugc?entry=pll&from=map&fromPanelNum=1&ts=1688611469189&type=photoView
+
++more 버튼 만들기
+
+푸터
+
+이용약관 위치 이동 후 깔끔하게 가리기
+
+
+----------------------------
+
+시안 제작 (포토샵)
+레이아웃 -> 시안 제작

@@ -1,0 +1,535 @@
+
+
+사업자정보 ^
+주식회사 새들러컴퍼니
+대표자 박성민
+사업자등록번호 284-81-01964
+대표번호 02-498-0121
+영업시간 매일 12:00~21:00 (월요일 정기휴무)
+이메일 saddlerseoul@naver.com
+주소 서울특별시 강남구 도산대로17길 10, 지하1층(신사동)
+-----------------------------------------------------
+주식회사 푸드대시
+대표자 김홍균, 박준수
+사업자등록번호 628-88-02110
+통신판매업 2021-서울서초-2780
+대표번호 1833-8652
+이메일 contact@fooddash.co.kr
+주소 서울특별시 서초구 강남대로53길 8, 6층 5-7호
+개인정보보호책임자 이승주
+------------------------------------------------------
+이용약관 ● 개인정보처리방침
+------------------------------------------------------
+주식회사 푸드대시는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품,상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="apple-mobile-web-app-title" content="Saddler Haus">
+<meta property='og:title' content="&#xC0C8;&#xB4E4;&#xB7EC;&#xD558;&#xC6B0;&#xC2A4;" />
+<meta property='og:site_name' content="&#xC0C8;&#xB4E4;&#xB7EC;&#xD558;&#xC6B0;&#xC2A4;" />
+<meta property='og:url' content="/-v2/terms2" />
+<meta property='og:type' content="market mall" />
+<meta property='og:image' content="https://saddler.haus/parts_v2/images/biz/sdh/og_img.png" />
+<meta property='og:image:type' content="image/png" />
+<meta property='og:image:width' content="600" />
+<meta property='og:image:height' content="600" />
+<meta property='og:description' content="&#xC628;&#xB77C;&#xC778;&#xC73C;&#xB85C; &#xAC04;&#xD3B8;&#xD558;&#xAC8C; &#xC8FC;&#xBB38;&#xD574;&#xBCF4;&#xC138;&#xC694;" />
+<meta name="description" content="&#xC628;&#xB77C;&#xC778;&#xC73C;&#xB85C; &#xAC04;&#xD3B8;&#xD558;&#xAC8C; &#xC8FC;&#xBB38;&#xD574;&#xBCF4;&#xC138;&#xC694;">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCC98;&#xB9AC;&#xBC29;&#xCE68;</title>
+<link rel="shortcut icon" type="image/x-icon" href="/parts_v2/images/biz/sdh/favicon.ico?ver=20221215_1" />
+<link rel="stylesheet" type="text/css" href="/content/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" type="text/css" href="/content/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/content/upload/jquery.fileupload.css" />
+<link rel="stylesheet" type="text/css" href="/content/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="/parts_v2/css/common/base.css?ver=20221215_1" />
+<link rel="stylesheet" type="text/css" href="/parts_v2/css/biz/sdh/theme.css?ver=20221215_1" />
+<link rel="stylesheet" type="text/css" href="/content/hybridweb.css?ver=20221215_1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<link rel="stylesheet" type="text/css" href="/content/lib/css_loader/css-loader.css?ver=20221215_1" />
+<link rel="stylesheet" type="text/css" href="/content/jquery.basic.toast.css?ver=20221215_1" />
+<link rel="stylesheet" type="text/css" href="/content/ripples.css?ver=20221215_1" />
+<style>
+.header_fxd_wrap {}
+</style>
+<script src="/scripts/site/_mobile/site.base.min.js?v=?20221215_1"></script>
+<script src="/scripts/mcommon.js?ver=20221215_1"></script>
+<script src="/scripts/user/base.js?ver=20221215_1"></script>
+<script src="/scripts/user/market_user.js?ver=20221215_1"></script>
+<script src="/scripts/user/app_script.js?ver=vpjLfuYzhF7KkUiBSZ3xahxHHWqYKsdG"></script>
+<script src="/scripts/lib/jquery.waypoints.min.js?ver=20221215_1"></script>
+<script src="/scripts/jquery.basic.toast.js?v=20221215_1"></script>
+<script src="/scripts/lib/jquery-confirm.min.js"></script>
+<script src="/scripts/lib/toastr.min.js"></script>
+<script src="/scripts/lib/toast.min.js"></script>
+<script src="/parts/common/base.page.js"></script>
+<script src="/scripts/site/_mobile/parts_v2_old_layout.min.js?v=20221215_1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/underscore@1.12.1/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsnlog/2.30.0/jsnlog.min.js"></script>
+<script src="/scripts/moment.js"></script>
+<script src="/scripts/lib/ripples.js"></script>
+<script src="/scripts/lib/store.min.js"></script>
+<script src="/scripts/lib/signalr.min.js?v=20221215_1"></script>
+<script src="/scripts/user/timer_new.js?ver=20221215_1"></script>
+<script>
+var user_idx        = 0;
+var login_idx       = 0;
+var self_user_idx   = 0;
+var g_user_idx      = 0;
+var g_seller_idx    = 157198;
+var g_webapp_yn     = 'N';
+var g_domain        = 'https://saddler.haus';
+var g_route_char    = '-v2/';
+var g_root_dir      = '-v2/';
+var g_blazor_yn     = 'N';
+var g_dev           = 'N';
+if (typeof IMP !== 'undefined') {
+    IMP.init('imp45204056');
+}
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3GT6W');</script>
+
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3GT6W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="loader loader-default is-active" id="loader" style="display:none"></div>
+
+<div class="wrap">
+<div class="header">
+<div class="header_fxd">
+<div class="header_fxd_wrap">
+<h2>&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xCC98;&#xB9AC;&#xBC29;&#xCE68;</h2>
+<a href="javascript:void(0)" class="hbtn btn_l btn_left_back" id="btn_login_back"><span class="blind">뒤로가기</span></a>
+</div>
+</div>
+</div>
+<div id="container" class="container">
+<div class="terms_wrap">
+<p class="terms_p">주식회사 푸드대시(이하 "회사"라 합니다)는 관련 법령에 따라 정보주체의 개인정보를 보호하고, 이와 관련한 고충을 신속하고 원활하게 처리하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+<h3 class="tit_subject">제1조 (개인정보의 처리목적 및 처리항목)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사의 서비스 이용을 위해 수집 ∙ 이용하는 개인정보는 다음의 목적으로 이용되며, 목적 변경 시 별도의 동의를 받는 등 필요한 조치를 이행합니다.
+<div class="info_table_area">
+<table class="info_table">
+<caption><span class="blind">개인정보의 처리목적 및 처리항목</span></caption>
+<thead>
+<tr>
+<th scope="col">구분</th>
+<th scope="col">수집 ∙ 이용 목적</th>
+<th scope="col">수집 ∙ 이용항목</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row" class="bgw">회원 가입</th>
+<td>회원 가입의사 확인, 회원제 서비스 이용을 위한 제한적 본인확인, 불만 처리 등 원활한 의사소통 경로의 확보, 서비스 부정이용 방지, 계약이행을 위한 각종 고지 ∙ 통지 ∙ 안내, 통계 ∙ 분석</td>
+<td>이름, 휴대전화번호, 이메일 주소, 비밀번호</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">주문</th>
+<td>주문 관리, 배달 주소 및 연락처 확인, 민원 응대, 서비스 이용에 대한 리뷰 작성 권유, 서비스 이용 만족도 조사</td>
+<td>(필수) 수령인 정보(휴대전화번호, 주소)<br>* 포장/홀 주문 시 주소 제외<br>(선택) 공동현관 비밀번호</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">본인인증</th>
+<td>서비스 제공을 위한 이용자 본인확인, 주류구매 성인인증, 서비스 부정이용 방지</td>
+<td>[휴대전화 본인인증기관으로부터 제공받는 정보]<br>(필수) 휴대전화번호, DI(중복가입확인정보), 생년월일, 성별, 내/외국인 여부</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">결제</th>
+<td>결제 수단 등록 및 관리, 결제 처리 결과 확인</td>
+<td>[결제대행업체(PG사)로부터 제공받는 정보]<br>(필수) 결제 처리 결과, 부분 마스킹 처리된 카드/계좌번호, 카드사, 은행명</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">상담 ∙ 민원</th>
+<td>1대1 고객 상담, 상담 ∙ 불만 ∙ 분쟁 처리시 개인 식별, 후속 응대 및 처리</td>
+<td>
+<ul class="list_2depth">
+<li>콜센터 이용 시: (필수) 발신자번호, 상담내용(녹취 포함), 필요 시 본인확인을 위한 정보(휴대전화번호, 이메일 주소)</li>
+<li>상담톡/챗봇 이용 시: (필수) 카카오톡 이용자 식별값, 채팅내용, 필요 시 본인확인을 위한 정보(휴대전화번호, 이메일 주소)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">자동 생성 정보</th>
+<td>서비스 부정이용 방지, 개인정보유효기간제 준수, 맞춤형 서비스 제공, 온라인 맞춤형 광고</td>
+<td>(필수) 서비스 이용 기록, 접속 로그, 쿠키, 접속 IP 주소, 기기정보(모델명, OS 버전, 기기고유번호), 광고ID</td>
+</tr>
+<tr>
+<th scope="row" class="bgw">마케팅 ∙ 광고</th>
+<td>이벤트 및 혜택 알림 정보 등 마케팅 ∙ 광고 활용, 서비스/신상품이나 이벤트 정보 안내, 이벤트 경품 배송</td>
+<td>(선택) 이메일 주소, 휴대전화번호, 주소</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><span class="txt_num">②</span>회사는 다음 각 호의 방법에 따라 개인정보를 수집할 수 있습니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>회원가입 및 서비스 이용 과정에서 이용자가 개인정보 수집에 대해 동의를 하고 직접 정보를 입력하는 경우, 해당 개인정보를 수집합니다.</li>
+<li><span class="txt_num">2.</span>고객센터를 통한 상담 과정에서 웹 페이지, 메일, 팩스, 전화 등을 통해 이용자의 개인정보가 수집될 수 있습니다.</li>
+<li><span class="txt_num">3.</span>회사와 제휴한 외부 기업이나 단체로부터 개인정보를 제공받을 수 있으며, 이러한 경우에는 제휴사에서 이용자에게 개인정보 제공 동의를 받은 후 수집합니다.</li>
+</ul>
+</li>
+</ul>
+<h3 class="tit_subject">제2조 (개인정보의 처리 및 보유기간)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사는 이용자로부터 개인정보 수집 시에 동의 받은 다음 각 호의 기간 내에서 개인정보를 처리 및 보유합니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>회원 정보: 회원탈퇴 후 90 일까지(단, 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법령의 규정에 따라 거래 관계 확인을 위한 소비자 식별정보(휴대전화번호, DI(중복가입확인정보))는 5년 간 보관 후 파기)
+<p>* 회원 탈퇴 또는 회원 자격 정지 후 회원 재가입, 임의 해지 등을 반복적으로 행하여 회사가 제공하는 할인쿠폰, 이벤트 혜택 등으로 경제상의 이익을 취하거나 이 과정에서 명의를 무단으로 사용하는 등 편법 행위 또는 불법행위를 하는 회원을 차단하고자 회사는 회원 탈퇴 후 90 일 간 회원의 정보를 보유합니다.</p>
+</li>
+<li><span class="txt_num">2.</span>법령 위반에 따른 수사 ∙ 조사 등이 진행중인 경우에는 해당 건 종료 시까지</li>
+<li><span class="txt_num">3.</span>서비스 이용에 따른 채권 ∙ 채무관계 정산 시까지</li>
+<li><span class="txt_num">4.</span>비회원의 이용자 정보: 이용계약 종료 후 30일까지(단, 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법령의 규정에 따라 거래 관계 확인을 위한 소비자 식별정보(휴대전화번호, DI(중복가입확인정보))는 5년 간 보관 후 파기)
+<p>* 비회원에 대하여 이용약관에서 정한 환불, 반품 및 교환, 이용제한 조치 및 이에 대한 이의신청 여부 확인 등을 처리하고자 회사는 이용계약 종료 후 30일간 회원의 정보를 보유합니다.</p>
+</li>
+</ul>
+</li>
+<li><span class="txt_num">②</span>1 년 간 회원의 서비스 이용 기록이 없는 경우 회원에게 사전 통지하고 휴면계정으로 전환합니다. 또한, 휴면계정의 개인정보는 다른 이용자의 개인정보와 분리하여 5년 간 별도 저장 관리됩니다.
+<p>단, 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법령의 규정에 따라 거래 관계 확인을 위해 개인정보를 일정기간 보유합니다.</p>
+<div class="info_table_area">
+<table class="info_table">
+<caption><span class="blind">개인정보의 처리 및 보유기간</span></caption>
+<thead>
+<tr>
+<th scope="col">법령</th>
+<th scope="col">항목</th>
+<th scope="col">기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">전자상거래 등에서의 소비자보호에 관한 법률</td>
+<td>계약 또는 청약철회 등에 관한 기록</td>
+<td>5년</td>
+</tr>
+<tr>
+<td>대금결제 및 재화 등의 공급에 관한 기록</td>
+<td>5년</td>
+</tr>
+<tr>
+<td>소비자의 불만 또는 분쟁 처리에 관한 기록</td>
+<td>3년</td>
+</tr>
+<tr>
+<td>위치정보의 보호 및 이용 등에 관한 법률</td>
+<td>개인위치정보에 관한 기록</td>
+<td>6개월</td>
+</tr>
+<tr>
+<td>전자금융거래법</td>
+<td>전자금융 거래에 관한 기록</td>
+<td>5년</td>
+</tr>
+<tr>
+<td>통신비밀보호법</td>
+<td>서비스 이용 관련 개인정보(로그기록)</td>
+<td>3개월</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+<h3 class="tit_subject">제3조 (개인정보의 위탁)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.
+<div class="info_table_area">
+<table class="info_table">
+<caption><span class="blind">개인정보의 위탁</span></caption>
+<thead>
+<tr>
+<th scope="col">수탁업체</th>
+<th scope="col">위탁업무내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>㈜토스페이먼츠, ㈜카카오페이, 네이버파이낸셜㈜, 엔에이치엔한국사이버결제㈜</td>
+<td>전자결제 수단 제공</td>
+</tr>
+<tr>
+<td>㈜다날</td>
+<td>본인인증</td>
+</tr>
+<tr>
+<td>㈜체인로지스</td>
+<td>배송대행</td>
+</tr>
+<tr>
+<td>㈜카카오, ㈜링크허브</td>
+<td>알림톡/문자</td>
+</tr>
+<tr>
+<td>Amazon Web Services, Inc.</td>
+<td>데이터 보관(서버)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+<h3 class="tit_subject">제4조 (개인정보의 제3자 제공)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사는 이용자의 개인정보를 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</li>
+<li><span class="txt_num">②</span>회사는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>판매자
+<div class="info_table_area">
+<table class="info_table">
+<caption><span class="blind">개인정보의 제3자 제공</span></caption>
+<tbody>
+<tr>
+<th scope="row">개인정보를 제공받는 자</th>
+<td>주식회사 새들러컴퍼니</td>
+</tr>
+<tr>
+<th scope="row">제공받는 자의 개인정보 이용 목적</th>
+<td>주문 관리, 음식 배달 서비스 제공, 민원 응대, 프로모션 제공</td>
+</tr>
+<tr>
+<th scope="row">제공하는 개인정보의 항목</th>
+<td>이름, 휴대전화번호, 이메일 주소, 배송지 주소, 주문정보</td>
+</tr>
+<tr>
+<th scope="row">개인정보 보유 및 이용기간</th>
+<td>5년. 단 회원 탈퇴시 탈퇴 후 90일까지 보관(관련 법령에 따라 보관이 필요한 경우 해당기간까지 보관)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</li>
+<li><span class="txt_num">③	회사는 당초 수집 목적과 합리적인 범위 내에서 아래 각 기준을 고려하여, 정보주체의 동의 없이 개인정보를 이용 또는 제3자에게 제공할 수 있습니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>당초 수집 목적과 관련성이 있는지 여부</li>
+<li><span class="txt_num">2.</span>개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 개인정보의 추가적인 이용 또는 제공에 대한 예측 가능성이 있는지 여부</li>
+<li><span class="txt_num">3.</span>정보주체의 이익을 부당하게 침해하는지 여부</li>
+<li><span class="txt_num">4.</span>가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지 여부</li>
+</ul>
+</span></li>
+</ul>
+<h3 class="tit_subject">제5조 (정보주체의 권리·의무 및 행사방법)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>정보주체는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>개인정보 열람요구</li>
+<li><span class="txt_num">2.</span>오류 등이 있을 경우 정정 요구</li>
+<li><span class="txt_num">3.</span>삭제요구</li>
+<li><span class="txt_num">4.</span>처리정지 요구</li>
+</ul>
+</li>
+<li><span class="txt_num">②</span>제1항에 따른 권리 행사는 서비스에서 제공하는 관련 메뉴(개인정보 확인 및 변경 메뉴, 탈퇴 메뉴)가 있는 경우 해당 메뉴의 이용을 통하여, 없는 경우는 회사에 대한 서면, 전화 및 전자우편을 통하여 하실 수 있으며, 회사는 이에 대해 지체없이 조치하겠습니다.</li>
+<li><span class="txt_num">③</span>정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 회사는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</li>
+<li><span class="txt_num">④</span>제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 회사에 위임장을 제출하셔야 합니다.</li>
+<li><span class="txt_num">⑤</span>정보주체는 개인정보 보호법 등 관계법령을 위반하여 회사가 처리하고 있는 정보주체 본인이나 타인의 개인정보 및 사생활을 침해하여서는 아니됩니다.</li>
+</ul>
+<h3 class="tit_subject">제6조 (아동의 개인정보보호)</h3>
+<p class="terms_p">회사는 만 14세 미만 아동의 개인정보를 보호하기 위하여, 만 14세 미만 아동의 회원가입은 제한합니다.</p>
+<h3 class="tit_subject">제7조 (개인정보의 파기)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</li>
+<li><span class="txt_num">②</span>정보주체로부터 동의 받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 제2조에 기재된 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</li>
+<li><span class="txt_num">③</span>개인정보 파기의 절차 및 방법은 다음과 같습니다.
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>파기절차 : 회사는 파기 사유가 발생한 개인정보를 선정하고, 회사의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.</li>
+<li><span class="txt_num">2.</span>파기방법 : 회사는 전자적 파일 형태로 기록저장된 개인정보는 기록을 재생할 수 없도록 기술적 방법을 이용하여 파기하며, 종이 문서에 기록□저장된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다.</li>
+</ul>
+</li>
+</ul>
+<h3 class="tit_subject">제8조 (개인정보의 안전성 확보조치)</h3>
+<p class="terms_p">회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>기술적 조치: 정보주체의 개인정보는 비밀번호에 의해 보호되며, 중요한 데이터는 파일 및 전송 데이터를 암호화하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 통해 보호하고 있습니다. 회사는 컴퓨터 바이러스에 의한 피해를 방지하기 위하여 백신프로그램을 설치하고 주기적으로 업데이트 하며, 해킹 등 외부침입을 방지하기 위하여 각 서버마다 침입차단 시스템을 이용하고 있습니다.</li>
+<li><span class="txt_num">2.</span>관리적 조치: 개인정보관련 취급 직원은 담당자에 한정시켜 최소화하고, 개인정보보호 의무에 관해 정기적인 교육을 실시하며, 접근 권한을 관리하는 등 관리적 대책을 시행하고 있습니다.</li>
+</ul>
+<h3 class="tit_subject">제9조 (개인정보 자동 수집 장치의 설치∙운영 및 거부에 관한 사항)</h3>
+<p class="terms_p">회사는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 아래와 같이 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</p>
+<ul class="list_2depth_type2">
+<li><span class="txt_num">1.</span>쿠키의 사용목적: 이용자의 접속 빈도나 방문 시간 등을 분석, 이용자의 서비스 사용 패턴 파악 및 자취 추적, 보안 접속 여부, 이용자 규모 등을 통해 보안 관리 및 서비스 개선 및 신규 서비스 개발, 맞춤형 서비스 제공에 이용합니다.</li>
+<li><span class="txt_num">2.</span>쿠키의 설치∙운영 및 거부: 서비스 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 이용자는 웹 브라우저에서 옵션의 설정을 변경함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수 있습니다.</li>
+<li><span class="txt_num">3.</span>쿠키 저장을 거부할 경우 로그인이 필요한 일부 서비스 이용에 어려움이 발생할 수 있습니다.</li>
+</ul>
+<h3 class="tit_subject">제10조 (개인정보 보호책임자)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+<h4 class="tit_2depth">▶ 개인정보 보호책임자</h4>
+<ul class="list_2depth">
+<li>성명: 이승주</li>
+<li>직책: 기술총괄이사</li>
+<li>연락처: 070-4848-3146, <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="197a76776d787a6d597f76767d7d786a71377a7637726b">[email&#160;protected]</a></li>
+</ul>
+</li>
+<li><span class="txt_num">②</span>정보주체는 회사의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다.</li>
+</ul>
+<h3 class="tit_subject">제11조 (개인정보 처리방침의 개정)</h3>
+<ul class="list_1depth">
+<li><span class="txt_num">①</span>이 개인정보처리방침은 관련 법령의 변경, 내부 운영방침 등의 변경에 따라 개정될 수 있습니다. 개정 시에는 개정 최소 7일 전부터 서비스의 '공지사항'을 통해 그 내용을 공지합니다. 다만, 개인정보의 수집 및 활용 등에 있어 정보주체의 권리의 중요한 변경이 있을 경우에는 최소 30일 전에 공지합니다.</li>
+<li><span class="txt_num">②</span>이 개인정보처리방침은 2022년 01월 25일부터 적용되며, 변경 전의 개인정보처리방침은 공지사항을 통해서 확인하실 수 있습니다.</li>
+</ul>
+<ul class="list_2depth">
+<li>공고일자 : 2022년 01월 17일</li>
+<li>시행일자 : 2022년 01월 25일</li>
+</ul>
+</div>
+</div>
+
+<div class="footer">
+<div class="footer_wrap">
+<ul class="sns_link">
+<li><a href="https://www.instagram.com/saddlerhaus_bakery" target="_sns" class="instagram"><span class="blind">instagram</span></a></li>
+<li style=display:none><a href="" target="_sns" class="facebook"><span class="blind">facebook</span></a></li>
+<li style=display:none><a href="" target="_sns" class="naver"><span class="blind">naver</span></a></li>
+<li style=display:none><a href="" target="_sns" class="twiiter"><span class="blind">twitter</span></a></li>
+<li style=display:none><a href="" target="_sns" class="youtube"><span class="blind">youtube</span></a></li>
+<li><a href="https://pf.kakao.com/_DeTVb" target="_sns" class="kakaochannel"><span class="blind">kakao</span></a></li>
+</ul>
+<div class="footer_top">
+<button type="button" class="btn_footer_more">사업자정보</button>
+</div>
+<div class="footer_content">
+<div class="footer_mid">
+ <div class="company_info">
+<ul class="footer_list">
+<li><strong>&#xC8FC;&#xC2DD;&#xD68C;&#xC0AC; &#xC0C8;&#xB4E4;&#xB7EC;&#xCEF4;&#xD37C;&#xB2C8;</strong></li>
+<li><strong>대표자</strong><span>&#xBC15;&#xC131;&#xBBFC;</span></li>
+<li><strong>사업자등록번호</strong><span>284-81-01964</span></li>
+<li><strong>대표번호 </strong><span><a href="tel:02-498-0121">02-498-0121</a></span></li>
+<li><strong>영업시간 </strong><span>&#xB9E4;&#xC77C; 12:00 - 21:00 (&#xC6D4;&#xC694;&#xC77C; &#xC815;&#xAE30;&#xD734;&#xBB34;)</span></li>
+<li><strong>이메일 </strong><span><a href="/cdn-cgi/l/email-protection#a6d5c7c2c2cac3d4d5c3c9d3cae6c8c7d0c3d488c5c9cb"><span class="__cf_email__" data-cfemail="7a091b1e1e161f08091f150f163a141b0c1f0854191517">[email&#160;protected]</span></a></span></li>
+<li><strong>주소</strong><span>&#xC11C;&#xC6B8;&#xD2B9;&#xBCC4;&#xC2DC; &#xAC15;&#xB0A8;&#xAD6C; &#xB3C4;&#xC0B0;&#xB300;&#xB85C;17&#xAE38; 10, &#xC9C0;&#xD558;1&#xCE35;(&#xC2E0;&#xC0AC;&#xB3D9;)</span></li>
+</ul>
+</div>
+<div class="company_info">
+<ul class="footer_list">
+<li><strong>주식회사 푸드대시</strong></li>
+<li><strong>대표자</strong><span>김홍균, 박준수</span></li>
+<li><strong>사업자등록번호</strong><span>628-88-02110</span></li>
+<li><strong>통신판매업</strong><span>2021-서울서초-2780</span></li>
+<li><strong>대표번호 </strong><span><a href="tel:18338652">1833-8652</a></span></li>
+<li><strong>이메일 </strong><span><a href="/cdn-cgi/l/email-protection#ed8e8283998c8e99ad8b828289898c9e85c38e82c3869f"><span class="__cf_email__" data-cfemail="177478796376746357717878737376647f397478397c65">[email&#160;protected]</span></a></span></li>
+<li><strong>주소</strong><span>서울특별시 서초구 강남대로 53길 8, 6층 5-7호</span></li>
+<li><strong>개인정보보호책임자</strong><span>이승주</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer_bot">
+<ul class="cs_link">
+<li><a href="/-v2/terms1">이용약관</a></li>
+<li><a href="/-v2/terms2">개인정보처리방침</a></li>
+</ul>
+</div>
+<div class="footer_notice">주식회사 푸드대시는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+$(function () {
+    /* footer */
+    $('.btn_footer_more').on('click', function () {
+        if ($(this).hasClass('footer_show')) {
+            $('.footer_content').hide();
+            $(this).removeClass('footer_show');
+        } else {
+            var footer_more_top = $('.footer').offset().top + $('.footer_content').height() + 'px';
+            $('.footer_content').show();
+            $(this).addClass('footer_show');
+            $('html, body').animate({ scrollTop: footer_more_top }, 0);
+        }
+    });
+});
+</script>
+<aside class="aside_layer">
+<div class="aside_wrap">
+<div class="aside_header">
+<button type="button" class="btn btn_close_aside"><span class="blind">닫기</span></button>
+</div>
+<div class="aside_container">
+<div class="aside_content">
+<div class="aside_login">
+<div class="login_msg">
+<h2>로그인/회원가입</h2>
+<p>로그인/회원가입 하시고<br> 회원에게만 제공되는 혜택을 누리세요!</p>
+</div>
+<ul class="btn_area btn_type_2">
+ <li><span><a href="javascript:void(0);" class="btn btn_t1 md-ripples" onclick="join();">회원가입</a></span></li>
+<li><span><a href="javascript:void(0);" class="btn btn_t2 md-ripples" onclick="login();">로그인</a></span></li>
+</ul>
+</div>
+<div class="aside_link_wrap">
+<h3>서비스 이용</h3>
+<ul class="aside_link">
+<li><a href="/-v2/faq">자주하는질문(FAQ)</a></li>
+</ul>
+</div>
+<div class="aside_link_wrap">
+<h3>약관</h3>
+<ul class="aside_link">
+<li><a href="/-v2/terms1">사용자 이용약관</a></li>
+<li><a href="/-v2/terms2">개인정보 취급방침</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside>
+
+</div>
+<div class="popup popup_logout" id="logout_popup">
+<div class="popup_container">
+<div class="popup_content">
+<div class="popup_body">
+<div class="popup_content_title">로그아웃 하시겠어요?</div>
+<ul class="popup_content_btn">
+<li><button type="button" class="btn btn_t1 md-ripples" id="btn_ok_logout">네, 로그아웃할게요</button></li>
+<li><button type="button" class="btn btn_t2 md-ripples btn_txt_cls_pop">아니요, 잘못 눌렀어요</button></li>
+</ul>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<div class="popup popup_leave" id="leave_popup">
+<div class="popup_container">
+<div class="popup_content">
+<div class="popup_body">
+<div class="popup_content_title">너무 아쉬워요 님!</div>
+<div class="popup_content_txt">
+<p style="margin-bottom:18px">지금 탈퇴하시면,</p>
+<ul class="dot_list">
+<li>서비스 내 회원정보 및 이용기록은 모두 삭제되며, 다시 복구할 수 없습니다.</li>
+<li>주문 및 결제 내역과 작성한 후기 정보는 이용약관에 의해 일정 기간동안 보관 후 파기합니다.</li>
+</ul>
+</div>
+<ul class="popup_content_btn">
+<li><button type="button" class="btn btn_t1 md-ripples" id="btn_leave_yes">동의 후 탈퇴</button></li>
+<li><button type="button" class="btn btn_t2 md-ripples" id="btn_leave_no">탈퇴 취소</button></li>
+</ul>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7e47e73b6e7980d1","token":"81b9968bf6ee4c0ca1ea8c9f40c4bc30","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+<script src="/scripts/site/_mobile/parts_v2_old_layout.base.min.js?v=20221215_1"></script>

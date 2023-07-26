@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://saddler.haus/-v2/feed -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="apple-mobile-web-app-title" content="Saddler Haus">
+<meta property="og:title" content="새들러하우스">
+<meta property="og:site_name" content="새들러하우스">
+<meta property="og:url" content="/-v2/feed">
+<meta property="og:type" content="market mall">
+<meta property="og:image" content="https://saddler.haus/parts_v2/images/biz/sdh/og_img.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:description" content="온라인으로 간편하게 주문해보세요">
+<meta name="description" content="온라인으로 간편하게 주문해보세요">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>새들러하우스</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://saddler.haus/parts_v2/images/biz/sdh/favicon.ico?ver=20221215_1">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/jquery.fileupload.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/base.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/theme.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/hybridweb.css">
+<link rel="stylesheet" href="./새들러하우스_files/jquery-confirm.min.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/css-loader.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/jquery.basic.toast.css">
+<link rel="stylesheet" type="text/css" href="./새들러하우스_files/ripples.css">
+<style>
+.header_fxd_wrap {}
+</style>
+<script type="text/javascript" async="" src="./새들러하우스_files/js"></script><script async="" src="./새들러하우스_files/gtm.js.다운로드"></script><script src="./새들러하우스_files/site.base.min.js.다운로드"></script>
+<script src="./새들러하우스_files/mcommon.js.다운로드"></script>
+<script src="./새들러하우스_files/base.js.다운로드"></script><style type="text/css"></style>
+<script src="./새들러하우스_files/market_user.js.다운로드"></script>
+<script src="./새들러하우스_files/app_script.js.다운로드"></script>
+<script src="./새들러하우스_files/jquery.waypoints.min.js.다운로드"></script>
+<script src="./새들러하우스_files/jquery.basic.toast.js.다운로드"></script>
+<script src="./새들러하우스_files/jquery-confirm.min.js.다운로드"></script>
+<script src="./새들러하우스_files/toastr.min.js.다운로드"></script>
+<script src="./새들러하우스_files/toast.min.js.다운로드"></script>
+<script src="./새들러하우스_files/base.page.js.다운로드"></script>
+<script src="./새들러하우스_files/parts_v2_old_layout.min.js.다운로드"></script>
+<script src="./새들러하우스_files/jquery-confirm.min.js(1).다운로드"></script>
+<script src="./새들러하우스_files/underscore-min.js.다운로드"></script>
+<script src="./새들러하우스_files/jsnlog.min.js.다운로드"></script>
+<script src="./새들러하우스_files/moment.js.다운로드"></script>
+<script src="./새들러하우스_files/ripples.js.다운로드"></script><style>.md-ripples{position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}.ripples-light .ripple{background-color:#FFFFFF}.ripples-dark .ripple{background-color:#000000}.ripple{background-color:#000000;opacity:.16;position:absolute;border-radius:50%;pointer-events:none;animation:ripple 0.3s ease-out}@keyframes ripple{from{transform:scale(0)}to{transform:scale(1)}}
+</style>
+<script src="./새들러하우스_files/store.min.js.다운로드"></script>
+<script src="./새들러하우스_files/signalr.min.js.다운로드"></script>
+<script src="./새들러하우스_files/timer_new.js.다운로드"></script>
+<script>
+var user_idx        = 0;
+var login_idx       = 0;
+var self_user_idx   = 0;
+var g_user_idx      = 0;
+var g_seller_idx    = 157198;
+var g_webapp_yn     = 'N';
+var g_domain        = 'https://saddler.haus';
+var g_route_char    = '-v2/';
+var g_root_dir      = '-v2/';
+var g_blazor_yn     = 'N';
+var g_dev           = 'N';
+if (typeof IMP !== 'undefined') {
+    IMP.init('imp45204056');
+}
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3GT6W');</script>
+
+<style>.footer { padding-bottom: 56px } </style>
+<script>
+var g_feed_use_yn = 'Y';
+var g_opening_popup = 'Y';
+var g_instagram_token = 'IGQVJWb1VOUF9JTG0taGlBN1ZAUNnlDWEFGbXRBZAm9KY21ZAUzNpTEFaYmNLQXFNY2N2SFBGQUgwemtNaDdBeGR2V0J1YWR0S3JIcWpIRm05VXRuZA2NNWnE3ZAllzbWFMRzRpaGtqTG9acDhvN3NsUU1CbwZDZD';
+var g_instagram_yn = 'N';
+var g_youtube_playlist_use_yn = 'N';
+var g_cell_phone_auth_yn = '';
+</script>
+<script src="./새들러하우스_files/instafeed.min.js.다운로드"></script>
+<script src="./새들러하우스_files/parts_v2_feed_list.min.js.다운로드"></script>
+</head>
+<body class="">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3GT6W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="loader loader-default is-active" id="loader" style="display:none"></div>
+
+<div class="wrap">
+<div class="header">
+<div class="header_fxd">
+<div class="header_fxd_wrap">
+<h1>
+<img src="./새들러하우스_files/logo_home.webp" alt="" class="header_logo">
+</h1>
+<button type="button" class="hbtn btn_l btn_left_reveal"><span class="blind">메뉴보기</span></button>
+</div>
+</div>
+</div>
+<div id="container" class="container">
+<div class="swiper-container home_visual swiper-container-initialized swiper-container-horizontal">
+<ul class="swiper-wrapper">
+<li class="swiper-slide swiper-slide-active" style="width: 720px;">
+<a class="home_visual_box" href="https://saddler.haus/-v2/pickup/products/5864" style="background-image:url(https://img.saddler.haus/banner/IMG_2022_12_12/000365836001.jpg)"><span class="blind"></span></a>
+</li>
+</ul>
+<div class="swiper-scrollbar" style="display: none;"><div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); width: 0px;"></div></div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+<div class="home_item_list">
+<div class="home_title_area">
+<h2 class="home_title fd_600">our stores</h2>
+<p class="home_title_desc">새들러하우스 전국 지점안내</p>
+</div>
+<div class="swiper-container item_swipe item_swipe_square instance-0 swiper-container-initialized swiper-container-horizontal">
+<ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+<li class="swiper-slide swiper-slide-active" style="margin-right: 20px;">
+<a href="javascript:void(0)" id="f_1242" banner_idx="1242" class="item_box link_view_feed">
+<div class="item_img"><img src="./새들러하우스_files/000359169001.jpg" alt="신사 본점"></div>
+<div class="item_name ellip_line2">신사 본점</div>
+</a>
+</li>
+<li class="swiper-slide swiper-slide-next" style="margin-right: 20px;">
+<a href="javascript:void(0)" id="f_1244" banner_idx="1244" class="item_box link_view_feed">
+<div class="item_img"><img src="./새들러하우스_files/000359174001.jpg" alt="제주 애월점"></div>
+<div class="item_name ellip_line2">제주 애월점</div>
+</a>
+</li>
+<li class="swiper-slide" style="margin-right: 20px;">
+ <a href="javascript:void(0)" id="f_1245" banner_idx="1245" class="item_box link_view_feed">
+<div class="item_img"><img src="./새들러하우스_files/000359176001.webp" alt="압구정 갤러리아점"></div>
+<div class="item_name ellip_line2">압구정 갤러리아점</div>
+</a>
+</li>
+</ul>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+</div>
+
+<div class="ft_nav">
+<div class="ft_nav_wrap">
+<ul class="ft_nav_list">
+<li class="nav_home"><a href="javascript:void(0);" class="md-ripples selected"><strong>홈</strong></a></li>
+<li class="nav_pickup"><a href="https://saddler.haus/-v2/pickup" class="md-ripples "><strong>픽업예약</strong></a></li>
+<li class="nav_order_list"><a href="https://saddler.haus/-v2/order/list" class="md-ripples "><strong>주문내역</strong></a></li>
+<li class="nav_cart"><a href="https://saddler.haus/-v2/carts" class="md-ripples " id="btn_go_cart"><strong>장바구니 </strong></a></li>
+</ul>
+</div>
+</div>
+
+<div class="popup popup_feed" id="feed_popup">
+<div class="popup_container">
+<div class="popup_content">
+<div class="popup_feed_body" id="popup_feed_body">
+<div class="popup_content_img" id="feed_body_img"></div>
+</div>
+<div class="popup_content_img" id="feed_card_img"></div>
+<div class="popup_body" id="popup_body">
+<div class="popup_content_title" id="banner_title"></div>
+<div class="popup_content_txt" id="banner_desc"></div>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<div class="popup popup_notice" id="popup_notice">
+<div class="popup_container">
+<div class="popup_notice_content">
+<div class="popup_swiper">
+<ul class="swiper-wrapper">
+</ul>
+<div class="swiper-pagination"></div>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+<div class="popup_footer">
+<ul class="popup_close_area">
+<li><button type="button" class="btn_today_cls_pop" id="close_today">오늘 그만 보기</button></li>
+</ul>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<div class="footer">
+<div class="footer_wrap">
+<ul class="sns_link">
+<li><a href="https://www.instagram.com/saddlerhaus_bakery" target="_sns" class="instagram"><span class="blind">instagram</span></a></li>
+<li style="display:none"><a href="https://saddler.haus/-v2/feed" target="_sns" class="facebook"><span class="blind">facebook</span></a></li>
+<li style="display:none"><a href="https://saddler.haus/-v2/feed" target="_sns" class="naver"><span class="blind">naver</span></a></li>
+<li style="display:none"><a href="https://saddler.haus/-v2/feed" target="_sns" class="twiiter"><span class="blind">twitter</span></a></li>
+<li style="display:none"><a href="https://saddler.haus/-v2/feed" target="_sns" class="youtube"><span class="blind">youtube</span></a></li>
+<li><a href="https://pf.kakao.com/_DeTVb" target="_sns" class="kakaochannel"><span class="blind">kakao</span></a></li>
+</ul>
+<div class="footer_top">
+<button type="button" class="btn_footer_more">사업자정보</button>
+</div>
+<div class="footer_content">
+<div class="footer_mid">
+<div class="company_info">
+<ul class="footer_list">
+<li><strong>주식회사 새들러컴퍼니</strong></li>
+<li><strong>대표자</strong><span>박성민</span></li>
+<li><strong>사업자등록번호</strong><span>284-81-01964</span></li>
+<li><strong>대표번호 </strong><span><a href="tel:02-498-0121">02-498-0121</a></span></li>
+<li><strong>영업시간 </strong><span>매일 12:00 - 21:00 (월요일 정기휴무)</span></li>
+<li><strong>이메일 </strong><span><a href="mailto:saddlerseoul@naver.com">saddlerseoul@naver.com</a></span></li>
+<li><strong>주소</strong><span>서울특별시 강남구 도산대로17길 10, 지하1층(신사동)</span></li>
+</ul>
+</div>
+<div class="company_info">
+<ul class="footer_list">
+<li><strong>주식회사 푸드대시</strong></li>
+<li><strong>대표자</strong><span>김홍균, 박준수</span></li>
+<li><strong>사업자등록번호</strong><span>628-88-02110</span></li>
+<li><strong>통신판매업</strong><span>2021-서울서초-2780</span></li>
+<li><strong>대표번호 </strong><span><a href="tel:18338652">1833-8652</a></span></li>
+<li><strong>이메일 </strong><span><a href="mailto:contact@fooddash.co.kr">contact@fooddash.co.kr</a></span></li>
+<li><strong>주소</strong><span>서울특별시 서초구 강남대로 53길 8, 6층 5-7호</span></li>
+<li><strong>개인정보보호책임자</strong><span>이승주</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer_bot">
+<ul class="cs_link">
+<li><a href="https://saddler.haus/-v2/terms1">이용약관</a></li>
+<li><a href="https://saddler.haus/-v2/terms2">개인정보처리방침</a></li>
+</ul>
+</div>
+<div class="footer_notice">주식회사 푸드대시는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</div>
+</div>
+</div>
+<script>
+$(function () {
+    /* footer */
+    $('.btn_footer_more').on('click', function () {
+        if ($(this).hasClass('footer_show')) {
+            $('.footer_content').hide();
+            $(this).removeClass('footer_show');
+        } else {
+            var footer_more_top = $('.footer').offset().top + $('.footer_content').height() + 'px';
+            $('.footer_content').show();
+            $(this).addClass('footer_show');
+            $('html, body').animate({ scrollTop: footer_more_top }, 0);
+        }
+    });
+});
+</script>
+<aside class="aside_layer">
+<div class="aside_wrap">
+<div class="aside_header">
+<button type="button" class="btn btn_close_aside"><span class="blind">닫기</span></button>
+</div>
+<div class="aside_container">
+<div class="aside_content">
+<div class="aside_login">
+<div class="login_msg">
+<h2>로그인/회원가입</h2>
+<p>로그인/회원가입 하시고<br> 회원에게만 제공되는 혜택을 누리세요!</p>
+</div>
+<ul class="btn_area btn_type_2">
+<li><span><a href="javascript:void(0);" class="btn btn_t1 md-ripples" onclick="join();">회원가입</a></span></li>
+<li><span><a href="javascript:void(0);" class="btn btn_t2 md-ripples" onclick="login();">로그인</a></span></li>
+</ul>
+</div>
+<div class="aside_link_wrap">
+<h3>서비스 이용</h3>
+<ul class="aside_link">
+<li><a href="https://saddler.haus/-v2/faq">자주하는질문(FAQ)</a></li>
+</ul>
+</div>
+<div class="aside_link_wrap">
+ <h3>약관</h3>
+<ul class="aside_link">
+<li><a href="https://saddler.haus/-v2/terms1">사용자 이용약관</a></li>
+<li><a href="https://saddler.haus/-v2/terms2">개인정보 취급방침</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside>
+
+</div>
+<div class="popup popup_logout" id="logout_popup">
+<div class="popup_container">
+<div class="popup_content">
+<div class="popup_body">
+<div class="popup_content_title">로그아웃 하시겠어요?</div>
+<ul class="popup_content_btn">
+<li><button type="button" class="btn btn_t1 md-ripples" id="btn_ok_logout">네, 로그아웃할게요</button></li>
+<li><button type="button" class="btn btn_t2 md-ripples btn_txt_cls_pop">아니요, 잘못 눌렀어요</button></li>
+</ul>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<div class="popup popup_leave" id="leave_popup">
+<div class="popup_container">
+<div class="popup_content">
+<div class="popup_body">
+<div class="popup_content_title">너무 아쉬워요 님!</div>
+<div class="popup_content_txt">
+<p style="margin-bottom:18px">지금 탈퇴하시면,</p>
+<ul class="dot_list">
+<li>서비스 내 회원정보 및 이용기록은 모두 삭제되며, 다시 복구할 수 없습니다.</li>
+<li>주문 및 결제 내역과 작성한 후기 정보는 이용약관에 의해 일정 기간동안 보관 후 파기합니다.</li>
+</ul>
+</div>
+<ul class="popup_content_btn">
+<li><button type="button" class="btn btn_t1 md-ripples" id="btn_leave_yes">동의 후 탈퇴</button></li>
+<li><button type="button" class="btn btn_t2 md-ripples" id="btn_leave_no">탈퇴 취소</button></li>
+</ul>
+</div>
+<button type="button" class="btn_cls_pop"><span class="blind">닫기</span></button>
+</div>
+</div>
+<div class="popup_bg"></div>
+</div>
+<script defer="" src="./새들러하우스_files/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7e14576ed9bcb009&quot;,&quot;token&quot;:&quot;81b9968bf6ee4c0ca1ea8c9f40c4bc30&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<script src="./새들러하우스_files/parts_v2_old_layout.base.min.js.다운로드"></script></body></html>

@@ -1,0 +1,687 @@
+﻿var ROW_COUNT = 24;
+var g_device_id;
+var g_valid_image_size_mb = 10;
+var g_clicked = false;
+var g_login_url = '/-login';
+var g_signup_url = '/-signup';
+var g_call_native = 'NaviPushWithUrl';
+
+function debug(str) {
+    if (g_dev == 'Y')
+        console.log(str);
+}
+
+function callNative(command, obj_data) {
+    try {
+        invokeNative(command + '|' + obj_data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+function go_to_login(query_string) {
+    var url = g_login_url;
+    if (query_string == undefined)
+        query_string = url;
+
+    if (g_webapp_yn == 'Y') {
+        var url = stringFormat("{0}{1}", g_domain, query_string);
+        //callNative(g_call_native, url);
+        location.href = query_string;
+    } else {
+        location.href = query_string;
+    }
+    return false;
+}
+
+function go_to_check_page(url) {
+    if (g_webapp_yn == 'Y') {
+        if (g_user_idx > 0) {
+            location.href = url;
+        } else {
+            var url = stringFormat("{0}{1}", g_domain, g_login_url);
+            //callNative(g_call_native, url);
+            location.href = query_string;
+        }
+    } else {
+        location.href = url;
+    }
+
+    return false;
+}
+
+function go_to_signup() {
+    if (g_webapp_yn == 'Y') {
+        var url = stringFormat("{0}" + g_signup_url, g_domain);
+        //callNative(g_call_native, url);
+        location.href = query_string;
+    } else {
+        location.href = g_login_url;
+    }
+    return false;
+}
+
+function go_to_logout() {
+    if (!confirm('로그아웃 하시겠습니까?'))
+        return false;
+
+    if (g_webapp_yn == 'Y') {
+        callNative('Logout', '');
+    }
+
+    location.href = '/-logout';
+    return false;
+}
+
+function go_to_history_back() {
+    history.back();
+    return false;
+}
+
+function go_back_check() {
+    //if (history.length > 2) {
+    //    history.back();
+    //    return history.length;
+    //}
+
+    //return history.length;
+
+    if (document.referrer) {
+        history.back();
+        return 3;
+    }
+
+    return 1;
+}
+
+function refresh(app_token) {
+    localStorage.setItem('app_token', app_token);
+    setTimeout(function () {
+        location.reload(true);
+    }, 100);
+    return false;
+}
+
+function stay(device_id, token, url) {
+    if (device_id == '' || device_id == undefined)
+        device_id = localStorage.getItem("device_id");
+
+    if (token == '' || token == undefined)
+        token = localStorage.getItem("app_token");
+
+    $.ajax({
+        type: "POST",
+        url: url_path + "/user/service/login/stay",
+        data: stringFormat("device_id={0}", device_id),
+        dataType: "json",
+        headers: { "Authorization": "Bearer " + token },
+        cache: false,
+        success: function (response) {
+            if (response.response_code == '1000') {
+                if (url == 'refresh') {
+                    if (g_webapp_yn == 'Y') {
+                        var user_idx = 0;
+                        if (response.response_data_count > 0) {
+                            user_idx = response.response_data[0].user_idx;
+                        }
+
+                        var r = stringFormat('{0},{1}', response.response_message, user_idx);
+                        callNative('Login', r);
+                        return false;
+                    }
+                }
+
+                if (url == undefined || url == '')
+                    location.reload();
+                else
+                    location.href = url;
+            } else {
+                log('no login');
+            }
+        }
+    });
+
+    return false;
+}
+
+function set_session(device_id, app_token) {
+    localStorage.setItem("device_id", device_id);
+    localStorage.setItem("app_token", app_token);
+}
+
+function set_sns_url(device_id, google_url, kakao_url, facebook_url, naver_url) {
+    if (g_webapp_yn == 'Y') {
+        localStorage.setItem("device_id", device_id);
+        localStorage.setItem("google_url", google_url);
+        localStorage.setItem("kakao_url", kakao_url);
+        localStorage.setItem("facebook_url", facebook_url);
+        localStorage.setItem("naver_url", naver_url);
+    }
+}
+
+function reload_session(reload_yn) {
+    var refresh_session_date = localStorage.getItem("refresh_session_date");
+    var diff = 0;
+
+    if (refresh_session_date == null || refresh_session_date == '' || refresh_session_date == undefined) {
+        localStorage.setItem("refresh_session_date", new Date());
+    } else {
+        try {
+            var d1 = new Date(localStorage.getItem("refresh_session_date"));
+            var d2 = new Date();
+
+            diff = DateDiff.inSeconds(d1, d2);
+
+            if (diff < 60 * 5)
+                return false;
+        } catch {
+            localStorage.setItem("refresh_session_date", new Date());
+        }
+    }
+
+    var device_id = localStorage.getItem("device_id");
+    var token = localStorage.getItem("app_token");
+
+    if (token == null || token == '' || token == undefined) {
+        return false;
+    }
+
+    setTimeout(function () {
+        $.ajax({
+            type: "POST",
+            url: url_path + "/user/service/login/stay",
+            data: stringFormat("device_id={0}", device_id),
+            dataType: "json",
+            headers: { "Authorization": "Bearer " + token },
+            cache: false,
+            success: function (response) {
+                if (response.response_code == '1000') {
+                    localStorage.setItem("refresh_session_date", new Date());
+                    if (reload_yn == true) {
+                        location.reload();
+                    }
+
+                }
+            }
+        });
+    }, 300);
+    return false;
+}
+
+function go_to_url(url) {
+    var url = stringFormat("{0}{1}", g_domain, url);
+    callNative(g_call_native, url);
+    //location.href = url;
+    return false;
+}
+
+function go_to_url_with_check(url_check) {
+    if (g_webapp_yn == 'Y') {
+        if (g_user_idx > 0) {
+            var url = stringFormat("{0}{1}", g_domain, url_check);
+            location.href = url;
+        } else {
+            var url = stringFormat("{0}{1}", g_domain, g_login_url + '?return_url=' + url_check);
+            callNative(g_call_native, url);
+        }
+    } else {
+        location.href = url_check;
+    }
+
+    return false;
+}
+
+function move_page_url(url) {
+    if (url != '' && url != undefined) {
+        var url = stringFormat("{0}{1}", g_domain, url);
+        location.href = url;
+    }
+
+    return false;
+}
+
+function isIOSDevice() {
+    return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+}
+
+var u;
+
+function go_to_open_url(url) {
+    if (url != '' && url != undefined) {
+        var url = stringFormat("{0}", url);
+        if (g_webapp_yn == 'Y') {
+            if (isIOSDevice()) {
+                var link = document.createElementNS("http://www.w3.org/1999/xhtml", "a");
+                link.href = url;
+                link.target = '_blank';
+                var event = new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': false,
+                    'cancelable': true
+                });
+                link.dispatchEvent(event);
+            } else {
+                if (url.indexOf('o=y')) {
+                    location.href = url;
+                    return false;
+                }
+            }
+        } else {
+            window.open(url, '_blnak');
+        }
+    }
+
+    return false;
+}
+
+function click_to_url(url) {
+    if (url != '' && url != undefined) {
+        var url = stringFormat("{0}", url);
+        if (g_webapp_yn == 'Y') {
+            var link = document.createElementNS("http://www.w3.org/1999/xhtml", "a");
+            link.href = url;
+            var event = new MouseEvent('click', {
+                'view': window,
+                'bubbles': false,
+                'cancelable': true
+            });
+            link.dispatchEvent(event);
+        } else {
+            location.href = url;
+        }
+    }
+
+    return false;
+}
+
+function set_image_to_obj(data, obj_id, extension) {
+    var base64_img = '';
+    if (extension != '')
+        base64_img = "data:image/png;base64," + data;
+    else
+        base64_img = stringFormat("data:image/{0};base64,", extension) + data;
+
+    g_base64_image = base64_img;
+
+    if (obj_id != null && obj_id != '') {
+        $('#' + obj_id).attr('src', g_base64_image);
+
+        /*이미지에 순번이 있을 경우를 생각해서*/
+        var seq_idx = $('#' + obj_id).attr('seq_idx');
+        if (seq_idx == undefined)
+            g_image_option.seq_idx = '';
+        else
+            g_image_option.seq_idx = seq_idx;
+
+        /*이미지 사이즈 유효성 검사*/
+        var valid_img = valid_image_size(obj_id, g_valid_image_size_mb);
+        if (valid_img == false) {
+            $('#' + obj_id).attr('src', '');
+            $('#' + obj_id).hide();
+        } else {
+            if (valid_img == true)
+                $('#' + obj_id).show();
+        }
+    }
+}
+
+function set_image_to_obj_with_upload(data, obj_id, extension) {
+    var base64_img = '';
+    if (extension != '')
+        base64_img = "data:image/png;base64," + data;
+    else
+        base64_img = stringFormat("data:image/{0};base64,", extension) + data;
+
+    g_base64_image = base64_img;
+
+    if (obj_id != null && obj_id != '') {
+        $('#' + obj_id).attr('src', g_base64_image);
+
+        /*이미지에 순번이 있을 경우를 생각해서*/
+        var seq_idx = $('#' + obj_id).attr('seq_idx');
+        if (seq_idx == undefined)
+            g_image_option.seq_idx = '';
+        else
+            g_image_option.seq_idx = seq_idx;
+
+        g_image_option.image_path = 'user';
+        g_image_option.hidden_field_id = 'h_file_idx';
+
+        /*이미지 사이즈 유효성 검사*/
+        var valid_img = valid_image_size(obj_id, g_valid_image_size_mb);
+        if (valid_img == false) {
+            $('#' + obj_id).attr('src', '');
+            $('#' + obj_id).hide();
+        } else {
+            if (valid_img == true) {
+                $('#' + obj_id).show();
+                upload_image(obj_id);
+            }
+        }
+    }
+}
+
+/*이미지 파일 base64 -> blob*/
+function get_image(obj_id) {
+    var s = $('#' + obj_id).attr('src');
+    if (s.indexOf(',') >= 0) {
+        var d = s.split(',');
+        var data = d[1];
+
+        if (isBase64(data)) {
+            var b_obj_data = b64toBlob(s);
+            return b_obj_data;
+        }
+        return ''
+    }
+    return '';
+}
+
+function valid_image_size(obj_id, limit_mb_size) {
+    var b_obj_data = get_image(obj_id);
+    if (b_obj_data == '')
+        return null;
+
+    var fileSize = b_obj_data.size / 1024 / 1024;
+
+    if (limit_mb_size < fileSize) {
+        alert(stringFormat('파일 업로드는 {0} MB 제한입니다.', limit_mb_size));
+        return false;
+    }
+
+    return true;
+}
+
+var g_image_option = {};
+
+function upload_image(obj_id) {
+    var r = valid_image_size(obj_id, g_valid_image_size_mb);
+
+    if (r == true) {
+        var b_obj_data = get_image(obj_id);
+
+        var formData = new FormData();
+        if (g_image_option.user_idx > 0)
+            formData.append('user_idx', g_image_option.user_idx);
+
+        formData.append('file_path', (g_image_option.image_path == undefined) ? 'user' : g_image_option.image_path);
+        formData.append('upload', b_obj_data);
+        var url = url_path + "/File/UploadSimple";
+
+        //log(g_image_option.user_idx);
+        //log(g_image_option.image_path);
+        //log(g_image_option.hidden_field_id);
+        //log(g_image_option.seq_idx);
+        //log(url);
+
+        $('#loader').show();
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            dataType: "json",
+            processData: false,
+            contentType: false,
+            cache: false,
+            async: false,
+            success: function (response) {
+                if (Number(response.response_code) >= 3000) if (Number(response.response_code) == 3000) { alert(response.response_message); return; } else { location.href = '/user/logout'; return; }
+                if (response.response_data_count > 0) {
+                    if (response.response_message > 0) {
+                        var h_obj_id = stringFormat('#{0}{1}', g_image_option.hidden_field_id, g_image_option.seq_idx);
+                        $(h_obj_id).val(response.response_message);
+                    } else {
+                        alert('error');
+                    }
+                }
+
+                $('#loader').hide();
+            }
+            //error: ajaxError,
+            //complete: function () {
+            //    $('#loader').hide();
+            //    //$(input).val('');
+
+            //    //alert('upload complete');
+            //}
+
+        });
+    }
+}
+
+function select_native_image(obj_id) {
+    callNative('Photo', obj_id);
+    return false;
+}
+
+function freeze() {
+    if ($("html").css("position") != "fixed") {
+        var top = $("html").scrollTop() ? $("html").scrollTop() : $("body").scrollTop();
+        if (window.innerWidth > $("html").width()) {
+            $("html").css("overflow-y", "scroll");
+        }
+        $("html").css({ "width": "100%", "height": "100%", "position": "fixed", "top": -top });
+    }
+}
+
+function unfreeze() {
+    if ($("html").css("position") == "fixed") {
+        $("html").css("position", "static");
+        $("html, body").scrollTop(-parseInt($("html").css("top")));
+        $("html").css({ "position": "", "width": "", "height": "", "top": "", "overflow-y": "" });
+    }
+}
+
+//function dataURIToBlob(dataURI) {
+//    const splitDataURI = dataURI.split(',')
+//    const byteString = splitDataURI[0].indexOf('base64') >= 0 ? atob(splitDataURI[1]) : decodeURI(splitDataURI[1])
+//    const mimeString = splitDataURI[0].split(':')[1].split(';')[0]
+
+//    const ia = new Uint8Array(byteString.length)
+//    for (let i = 0; i < byteString.length; i++)
+//        ia[i] = byteString.charCodeAt(i)
+
+//    return new Blob([ia], { type: mimeString })
+//}
+
+//function b64toBlob(b64Data, contentType, sliceSize) {
+
+function b64toBlob(dataURI) {
+    var splitDataURI = dataURI.split(',');
+    var b64Data = splitDataURI[1];
+    var contentType = splitDataURI[0].split(':')[1].split(';')[0];
+    var sliceSize = 512;
+
+    var byteCharacters = atob(b64Data);
+    var byteArrays = [];
+
+    for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+        var byteNumbers = new Array(slice.length);
+        for (var i = 0; i < slice.length; i++) {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        var byteArray = new Uint8Array(byteNumbers);
+
+        byteArrays.push(byteArray);
+    }
+
+    var blob = new Blob(byteArrays, { type: contentType });
+    return blob;
+}
+
+function convert_to_blob(inputURI) {
+    var binaryVal;
+    var inputMIME = inputURI.split(',')[0].split(':')[1].split(';')[0];
+
+    if (inputURI.split(',')[0].indexOf('base64') >= 0)
+        binaryVal = atob(inputURI.split(',')[1]);
+    else
+        binaryVal = unescape(inputURI.split(',')[1]);
+
+    var blobArray = [];
+    for (var index = 0; index < binaryVal.length; index++) {
+        blobArray.push(binaryVal.charCodeAt(index));
+    }
+
+    return new Blob([blobArray], {
+        type: inputMIME
+    });
+}
+
+function isBase64(str) {
+    if (str === '' || str.trim() === '') { return false; }
+    try {
+        return btoa(atob(str)) == str;
+    } catch (err) {
+        return false;
+    }
+}
+
+function isDataURL(s) {
+    return !!s.match(isDataURL.regex);
+}
+isDataURL.regex = /^\s*data:([a-z]+\/[a-z]+(;[a-z\-]+\=[a-z\-]+)?)?(;base64)?,[a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*\s*$/i;
+
+function getLocation(href) {
+    var match = href.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/);
+    return match && {
+        href: href,
+        protocol: match[1],
+        host: match[2],
+        hostname: match[3],
+        port: match[4],
+        pathname: match[5],
+        search: match[6],
+        hash: match[7]
+    }
+}
+
+var isIOS = (function () {
+    var iosQuirkPresent = function () {
+        var audio = new Audio();
+
+        audio.volume = 0.5;
+        return audio.volume === 1;   /*volume cannot be changed from "1" on iOS 12 and below*/
+    };
+
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    var isAppleDevice = navigator.userAgent.includes('Macintosh');
+    var isTouchScreen = navigator.maxTouchPoints >= 1;   /*true for iOS 13 (and hopefully beyond)*/
+
+    return isIOS || (isAppleDevice && (isTouchScreen || iosQuirkPresent()));
+})();
+
+function set_device_id(device_id) {
+    g_device_id = device_id;
+    return g_device_id;
+}
+
+var setCookie = function (name, value, day) {
+    var date = new Date();
+    date.setTime(date.getTime() + day * 60 * 60 * 24 * 1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+
+var getCookie = function (name) {
+    var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return value ? value[2] : null;
+};
+
+var delCookie = function (name) {
+    var date = new Date();
+    date.setTime(date.getTime() - 100);
+    document.cookie = name + '=;expires=' + date.toUTCString() + ';path=/';
+};
+
+var DateDiff = {
+    inSeconds: function (d1, d2) {
+        var t2 = d2.getTime();
+        var t1 = d1.getTime();
+
+        return parseInt((t2 - t1) / 1000);
+    },
+    inMinutes: function (d1, d2) {
+        var t2 = d2.getTime();
+        var t1 = d1.getTime();
+
+        return parseInt((t2 - t1) / 60000);
+    },
+    inHours: function (d1, d2) {
+        var t2 = d2.getTime();
+        var t1 = d1.getTime();
+
+        return parseInt((t2 - t1) / 3600000);
+    },
+    inDays: function (d1, d2) {
+        var t2 = d2.getTime();
+        var t1 = d1.getTime();
+
+        return parseInt((t2 - t1) / (24 * 3600 * 1000));
+    },
+    inWeeks: function (d1, d2) {
+        var t2 = d2.getTime();
+        var t1 = d1.getTime();
+
+        return parseInt((t2 - t1) / (24 * 3600 * 1000 * 7));
+    },
+    inMonths: function (d1, d2) {
+        var d1Y = d1.getFullYear();
+        var d2Y = d2.getFullYear();
+        var d1M = d1.getMonth();
+        var d2M = d2.getMonth();
+
+        return (d2M + 12 * d2Y) - (d1M + 12 * d1Y);
+    },
+    inYears: function (d1, d2) {
+        return d2.getFullYear() - d1.getFullYear();
+    }
+}
+
+if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+        'use strict';
+        if (typeof start !== 'number') {
+            start = 0;
+        }
+
+        if (start + search.length > this.length) {
+            return false;
+        } else {
+            return this.indexOf(search, start) !== -1;
+        }
+    };
+}
+
+/*https://jsnlog.com*/
+function log(t) {
+    if (g_dev == 'Y')
+        JL().fatal(t);
+}
+
+function log_f(t) {
+    if (g_dev == 'Y')
+        JL().fatal(t);
+}
+
+function log_i(t) {
+    if (g_dev == 'Y')
+        JL().info('info => ' + t);
+}
+
+function log_d(t) {
+    if (g_dev == 'Y')
+        JL().debug(t);
+}
+
+function log_e(t) {
+    if (g_dev == 'Y')
+        JL().debug(t);
+}
+
+function log_w(t) {
+    if (g_dev == 'Y')
+        JL().debug(t);
+}

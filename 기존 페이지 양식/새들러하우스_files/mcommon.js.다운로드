@@ -1,0 +1,1 @@
+jQuery(function(){$('.btn_top').click(function(event){event.preventDefault();jQuery('html, body').animate({scrollTop:0},300);return false;});$(".btn_close").click(function(){$(".layer_bg").hide();});});
