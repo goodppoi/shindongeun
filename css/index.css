@@ -1,1 +1,177 @@
 @charset "utf-8";
+
+.wrapper { /* 그리드시스템 */
+    position: relative; /* postion: absolute의 기준 */
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-color: skyblue;
+}
+
+/*====header====*/
+
+header {
+    position: relative;
+    width: 1180px;
+    height: 1600px;
+    background: url(../images/header_image.jpg);
+    background-size: cover;
+}
+
+/* flex-container */
+.flex-container  {
+    display: flex;
+}
+
+.flex-container > .logo {
+    position: absolute;
+    left: 510px; top: 40px; }
+
+.flex-container > .mainmenu {
+    left: 281px; top: 120px;
+    font-size: 18px;
+    font-family: 'Lucida Console';
+}
+
+.mainmenu {
+    position: absolute;
+    width: 100%;
+}
+
+.gnb {
+    display: flex;
+    height: 220px;
+    align-items: center;
+}
+
+.gnb > li {
+    padding-left: 35px;
+}
+
+.gnb a {
+    width: 1200px;
+    color: #fff;
+    text-align: center;
+}
+
+.gnb a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* 서울대공원 메뉴태그 참고!! */
+header .submenu {
+    display: none;
+    
+    overflow: hidden;
+    
+}
+
+header .submenu a {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .submenu a:hover {
+    color: yellow;
+    height: 150px;
+    top: 100px; left: 0; right: 0; 
+    z-index: 1;
+    background: #121429;
+    transition: height .5s;
+    
+}
+/*=====main=====*/
+
+.ourstores {
+    background-color: #fff;
+}
+
+.ourstores > h2 {
+    margin-top: 190px;
+    margin-bottom: 58px;
+    padding-left: 10px;
+}
+
+.introduce {
+    position: relative;
+}
+
+.introduce .wrapper {
+    display: flex;
+}
+
+.introduce .sinsa {
+    width: 50%;
+}
+
+.introduce .sinsa-txt {
+    width: 50%;
+    left: 180px; top: 210px;
+    text-align: left;
+    color: #000;
+    padding-top: 158px;
+    padding-left: 80px;
+}
+
+
+.introduce .icon {
+    position: absolute;
+    right: 71px;
+    bottom: 160px;
+}
+
+.introduce .icon > img {
+    padding-left: 20px;
+}
+
+/* jeju */
+.introduce2 .jeju-txt > strong {
+    margin-bottom: 30px;
+}
+
+.introduce2 .jeju-txt > p {
+    font-size: 16px;
+}
+
+.introduce2 {
+    position: relative;
+}
+
+.introduce2 .wrapper {
+    display: flex;
+}
+
+.introduce2 .jeju {
+    width: 50%;
+}
+
+.introduce2 .jeju-txt {
+    width: 50%;
+    left: 180px; top: 210px;
+    text-align: left;
+    color: #000;
+    padding-top: 158px;
+    padding-left: 80px;
+}
+
+.introduce .jeju-txt > strong {
+    margin-bottom: 30px;
+}
+
+.introduce .jeju-txt > p {
+    font-size: 16px;
+}
+
+.introduce2 .icon {
+    position: absolute;
+    right: 83px;
+    bottom: 160px;
+}
+
+.introduce2 .icon > img {
+    padding-left: 20px;
+}
+
+/*=====footer=====*/
