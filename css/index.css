@@ -115,7 +115,6 @@ header .submenu a:hover {
     padding-left: 80px;
 }
 
-
 .introduce .icon {
     position: absolute;
     right: 71px;
@@ -174,4 +173,41 @@ header .submenu a:hover {
     padding-left: 20px;
 }
 
+.play {
+    display: flex;
+    width: 100%;
+}
+
+.youtube h1 {
+    color:#fff;
+    margin-top: 135px;
+}
+
+.play .frame {
+    position: relative;
+    padding-left: 20px;
+}
+
+.menu {
+    width: 100%;
+}
+.menu h2 {
+    margin-top: 135px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    background-color: #fff;
+}
+
+
+.insta4 {
+    display: flex;
+}
+
+.insta4 > li {
+    width: 290px;
+}
+.insta4 > li:nth-child(3):hover {
+    
+    opacity: 50%;
+}
 /*=====footer=====*/
