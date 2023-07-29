@@ -204,23 +204,54 @@ header .submenu a:hover {
 
 /* menu */
 
-.menu {
-    width: 100%;
+.order-list {
+
 }
-.menu h2 {
+
+h2 {
     margin-top: 135px;
     padding-left: 10px;
     margin-bottom: 50px;
     background-color: #fff;
 }
 
+.menu-box {
+    display: flex;
+    height: 1800px;
+    background: url(../images/main_background_image.jpg) no-repeat fixed;
+    background-size: cover;
+}
 
-.menu-list .order-menu {
+.menu-box .coffee-drinks {
     width: 400px;
 }
 
-.menu {
-    display: flex;
+.coffee-drinks,
+h4 {
+    color:#CD2827;
+}
+
+.coffee-drinks {
+    background: url(../images/main_menu-category.png) no-repeat;
+}
+
+.waffle {
+    background: url(../images/main_menu-category.png) no-repeat;
+}
+.set-menu {
+    background: url(../images/main_menu-category.png) no-repeat;
+}
+
+.bun {
+    background: url(../images/main_menu-category.png) no-repeat;
+}
+
+.bagueatte {
+    background: url(../images/main_menu-category.png) no-repeat;
+}
+
+.roll {
+    background: url(../images/main_menu-category.png) no-repeat;
 }
 
 /* instagram */
