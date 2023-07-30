@@ -19,9 +19,7 @@ header {
 }
 
 /* flex-container */
-.flex-container  {
-    display: flex;
-}
+
 .flex-container > .logo {
     position: absolute;
     left: 510px; top: 40px; 
@@ -205,21 +203,25 @@ header .submenu a:hover {
 /* menu */
 
 .order-list {
+    display: flex;
+}
 
+.menu-box {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 10px 10px;
+    margin-bottom: 112px;
+    height: 1800px;
+    background: url(../images/main_background_image.jpg) no-repeat fixed;
+    background-size: cover;
 }
 
 h2 {
     margin-top: 135px;
-    padding-left: 10px;
     margin-bottom: 50px;
+    padding: 30px 0 30px 0;
     background-color: #fff;
-}
-
-.menu-box {
-    display: flex;
-    height: 1800px;
-    background: url(../images/main_background_image.jpg) no-repeat fixed;
-    background-size: cover;
 }
 
 .menu-box .coffee-drinks {
@@ -227,31 +229,177 @@ h2 {
 }
 
 .coffee-drinks,
+.waffle-list,
+.set-menu,
+.bun,
 h4 {
     color:#CD2827;
+    font-size:28px;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 .coffee-drinks {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background-image: url(../images/menu-category1.png);
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.coffee-drinks-list > li {
+    padding-top: 18px;
+}
+.coffee-drinks-list strong {
+    font-size: 22px;
+}
+.coffee-drinks-list p {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .waffle {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background: url(../images/menu-category1.png) no-repeat;
+    background-position: 50px 0;
+    background-repeat: no-repeat;
 }
+
+.waffle-list > li {
+    color:#CD2827;
+    padding-top: 20px;
+}
+
+.waffle-list strong {
+    font-size: 22px;
+}
+
+.waffle-list p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .set-menu {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background: url(../images/menu-category1.png) no-repeat;
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.set-menu > h4 {
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+
+.set-menu-list > li {
+    color:#CD2827;
+    padding-top: 20px;
+}
+
+.set-menu-list strong {
+    font-size: 22px;
+}
+
+.set-menu-list p {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .bun {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background: url(../images/menu-category1.png) no-repeat;
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.bun-list > li {
+    color:#CD2827;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.bun-list strong {
+    font-size: 22px;
+}
+
+.bun-list p {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .bagueatte {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background: url(../images/menu-category1.png) no-repeat;
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.bagueatte > h4 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.baguatte-list > li {
+    color:#CD2827;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.baguatte-list strong {
+    font-size: 22px;
+}
+
+.baguatte-list p {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .roll {
-    background: url(../images/main_menu-category.png) no-repeat;
+    background: url(../images/menu-category1.png) no-repeat;
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.roll > h4 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.roll-list > li {
+    color:#CD2827;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.roll-list strong {
+    font-size: 22px;
+}
+
+.roll-list p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* review */
+
+.review {
+    display: flex;
+    width: 100%;
+}
+
+.customer {
+    display: flex;
+}
+
+.customer-txt {
+    color: #CD2827;
+    font-size: 20px;
+    text-align: justify;
+    background: url(../images/review_box.png) no-repeat; 
+    width: 700px;
+    height: 210px;
+}
+
+.customer-txt > p {
+    width: 640px;
+    padding-left: 60px;
+    padding-top: 20px;
 }
 
 /* instagram */
@@ -262,7 +410,7 @@ h4 {
 .insta4 > li {
     width: 290px;
 }
-.insta4 > li:nth-child(3):hover {
+.insta4 a:hover {
     
     opacity: 50%;
 }
