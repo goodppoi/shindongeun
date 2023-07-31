@@ -106,7 +106,143 @@ a* instagram / background-color: white;
               icon1,2 + font 가운데 정렬 / 위아래 : 120
 
 
+---------------------------------------------
 
+그림 - 그림자효과
+ <style>     
+            body { 
+                  font: 12px "Arial"; 
+                  margin: 20px; 
+            }
+            h1 { 
+                  float: left; 
+                  margin-right: 50px; 
+            }
+            h1 a { 
+                  display: block; 
+                  width: 150px; 
+                  padding: 30px;  
+                  font-size: 40px; 
+                  text-decoration: none; 
+                  text-align: center; 
+                  color: #000;  
+                  border: 1px solid skyblue;  
+                  border-radius: 15px; 
+                  background-color: #eee; 
+
+                  /* 그림자 효과: 박스, 텍스트 적용 */
+                  box-shadow: 10px 10px 20px 0 rgba(0, 179, 255, 0.5);
+                  text-shadow : 3px 3px 5px #9a9a9a;
+            } 
+                  
+            h1 a:hover{background-color:#aff;}
+
+
+      </style>
+</head>
+<body>
+      <h1><a href="#">고양이</a></h1>
+      <h1><a href="#">강아지</a></h1>
+</body>
+-------------------------------------------------------------
+
+글씨-그림자효과
+
+ <style>
+        body {
+            font: bold 15px "맑은 고딕";
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px red;
+        }
+
+        h2 {
+            -webkit-text-stroke: 5px rgba(6, 255, 64, 0.5);
+        }
+
+        p {
+            text-shadow: -5px -5px 2px pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Text-shadow effect!</h1>
+    <h2>text-stroke effect!</h2>
+    <p><b>Note:</b> Internet Explorer 9 and earlier versions, does not support the text-shadow property.</p>
+</body>
+-----------------------------------------------------------------
+박스안에서 스케일 커지기
+
+	<style> 
+		.outBox {
+			position: relative;
+			margin: 100px auto;
+			width: 200px; height: 200px;
+			background-color: red;
+			border: 1px solid black;
+			overflow: hidden; /* 필수_중요! 이미지 사이즈가 커지면 박스 크기만큼 이미지를 보여줌. */
+		}
+
+		.inBox {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100px;
+			background-color: bisque;
+		}
+
+		.inBox > img {
+			width: 100%;
+		}
+
+		.inBox:hover {
+			transform: scale(1.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="outBox">
+		<div class="inBox">
+			<img src="images/jully1.jpg" alt="고양이 쥴리">
+		</div>
+	</div>
+</body>
+-------------------------------------------------------------
+디브 뒤집기
+
+	.txtbox {
+		position: absolute;
+		left: -100; top:0;
+		width: 1100px; height: 50px;
+		background-color: pink;
+
+		transform: rotate(-90deg);
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="cross">
+		<span></span>
+		<span></span>
+    </div>
+
+	<div class="mobile-btn">
+		<span></span>
+		<span></span>
+		<span></span>
+    </div>
+
+	<div class="box">
+		<img src="./images/jully2.jpg" alt="jully">
+	</div>
+	<div class="txtbox">
+		<span>고양이 줄리 안녕!</span>
+	</div>
+----------------------------------------------------
 
 <FOOTER>
 
