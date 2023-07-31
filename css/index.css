@@ -14,7 +14,7 @@ header {
     position: relative;
     width: 1180px;
     height: 1600px;
-    background: url(../images/header_image.jpg) center top;
+    background: url(../images/header_image.jpg) no-repeat center top;
     background-size: cover;
 }
 
@@ -59,7 +59,11 @@ header {
 }
 /* 서울대공원 메뉴태그 참고!! */
 header .submenu {
-    overflow: hidden;   
+    display: none;
+    position: absolute; 
+    height: 150px;
+    top: 100px; left: 0; right: 0; 
+    z-index: 9999; 
 }
 header .submenu  a {
     color: #fff;
@@ -150,6 +154,7 @@ header .submenu a:hover {
 
 /* jeju */
 
+
 .introduce2 .jeju-txt .jeju-map {
     position: absolute;
     top: 225px; right: 250px;
@@ -193,6 +198,7 @@ header .submenu a:hover {
 .introduce2 .icon > img {
     padding-left: 20px;
 }
+
 
 /* youtube */
 .play {
@@ -255,6 +261,7 @@ h4 {
 
 .coffee-drinks-list > li {
     padding-top: 18px;
+    text-shadow: 2px 2px 2px pink;
 }
 .coffee-drinks-list strong {
     font-size: 22px;
@@ -270,9 +277,14 @@ h4 {
     background-repeat: no-repeat;
 }
 
+.waffle > h4 {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
 .waffle-list > li {
     color:#CD2827;
-    padding-top: 20px;
     text-shadow: 2px 2px 2px pink;
 }
 
@@ -292,13 +304,15 @@ h4 {
 }
 
 .set-menu > h4 {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 80px;
 }
 
 .set-menu-list > li {
     color:#CD2827;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-left: 40px;
+    text-shadow: 2px 2px 2px pink;
 }
 
 .set-menu-list strong {
@@ -320,6 +334,7 @@ h4 {
     color:#CD2827;
     padding-top: 30px;
     text-align: center;
+    text-shadow: 2px 2px 2px pink;
 }
 
 .bun-list strong {
@@ -339,6 +354,7 @@ h4 {
 
 .bagueatte > h4 {
     padding-top: 40px;
+    padding-left: 25px;
     padding-bottom: 10px;
 }
 
@@ -346,6 +362,7 @@ h4 {
     color:#CD2827;
     padding-top: 30px;
     text-align: center;
+    text-shadow: 2px 2px 2px pink;
 }
 
 .baguatte-list strong {
@@ -365,6 +382,7 @@ h4 {
 
 .roll > h4 {
     padding-top: 40px;
+    padding-left: 20px;
     padding-bottom: 10px;
 }
 
@@ -372,6 +390,7 @@ h4 {
     color:#CD2827;
     padding-top: 30px;
     text-align: center;
+    text-shadow: 2px 2px 2px pink;
 }
 
 .roll-list strong {
@@ -387,6 +406,11 @@ h4 {
 
 .review {
     margin: 0 auto;
+}
+
+.customer-box { 
+    width: 100%;
+    height: 1020px;
 }
 
 .customer {
@@ -411,6 +435,21 @@ h4 {
     width: 240px; height: 275px;
     overflow: hidden;
 }
+
+.customer2:nth-child(1) {
+    order: 2;
+}
+
+.customer2:nth-child(2) {
+    order: 1;
+}
+
+.customer2 .customer-txt {
+    width: 700px;
+    height: 210px;
+    background: url(../images/review_box2.png) no-repeat;
+}
+
 
 .inbox {
     position: absolute;
@@ -479,6 +518,7 @@ h4 {
 }
 
 .btn > .more {
+    color:#CD2827;
     position: absolute;
     left: 0%; top:0;
     width: 100%; /* span 가로크기 주면 가운데 정렬 됨. */
@@ -487,11 +527,13 @@ h4 {
 }
 
 /*펼치기 넣어야함*/
-.btn > a {
+.btn  a {
+    color:#CD2827;
     z-index: 1;
 }
 
 .btn > .more:hover {
+    color:#CD2827;
     font-weight: 600;
     opacity: 1;
     transition-delay: 0.2s;
@@ -505,17 +547,24 @@ h4 {
 
 .insta-box {
     position: absolute;
-    top:30px; left: 175px;
-    width: 190px;
+    top:30px; left: 170px;
+    width: 222px;
     height: 40px;
-    border: 1px solid #0593a1;
-    border-radius: 45%;
+    border: 2px solid #0593a1;
+    border-radius: 100px 100px 100px 100px;
 }
 
 .sns p > a {
-    color: #0593a1;;
-    font-size: 18px;
+    color: #0593a1;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
 }
+
+.sns p > a:hover {
+    color: aqua;
+}
+
 .insta4 {
     display: flex;
 }
