@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(function(){
+    $('.grabPromo').click(function(){
+    var parent = $(this).parents('.promo');
+    $(parent).find('.slideDown').slideDown();
+    });
+    $('.closeSlide').click(function(){
+    var parent = $(this).parents('.promo');
+    $(parent).find('.slideDown').slideUp();
+    });
+    });
+    </script>
+    <style>
+
+
+#submenu {
+    display: block;
+    position: absolute;
+    width: 110px;
+    display: none;
+    background: transparent;
+    list-style: none;
+    line-height: 2em; 
+}
+
+#menutitle:hover + #submenu {
+    display: block; 
+    -webkit-transition: height 1s ease;
+    -moz-transition: ease-in 2s none;
+    -ms-transition: ease-in  2s none;
+    -o-transition: ease-in  2s none;
+    transition: ease-in  2s none;  
+}
+
+#menutitle { 
+    color: #FFF;
+    background-color: aqua;
+}
+
+a { 
+    color: #ccc; 
+    font-size: 14px;}
+    </style>
+    <title>메뉴슬라이드</title>
+</head>
+<body>
+    <ul id="menutitle">Online-market</ul>
+    <ul id="submenu">
+        <li><a href="https://www.coupang.com/vp/products/7124504484?itemId=17846360813&vendorItemId=85009864425&pickType=COU_PICK&q=%EC%83%88%EB%93%A4%EB%9F%AC%ED%95%98%EC%9A%B0%EC%8A%A4&itemsCount=36&searchId=857e14f0906945a78893f5d0ff8a963d&rank=1&isAddedCart=">쿠팡</a></li>
+        <li><a href="https://www.kurly.com/goods/1000117648">컬리</a></li>
+        <li><a href="https://tohome.thehyundai.com/front/pd/pdd/productDetail.do?">현대식품관</a></li>
+        <li><a href="https://smartstore.naver.com/saddlerhaus/products/8740878204">스마트스토어</a></li>
+    </ul>
+
+    <span class="grabPromo">Open</span>
+and in the slide down area i have
+
+<a class="closeSlide">Close</a>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin:0; padding:0; }
+body { font-family: sans-serif;} 
+#content { margin: 50px; } 
+a { text-decoration: none; }  
+
+.expandable {
+    background: #fff;
+    overflow: hidden;
+    color: #000;   
+    line-height: 50px;
+
+    transition: all .5s ease-in-out;
+    height: 0;
+}
+
+.expandable:target {
+    height: 50px;
+}
+    </style>
+    <title>slide-down</title>
+</head>
+<body>
+    <div id="content"> 
+        <a href="#nav"><span>+</span></a>
+        <div class="expandable" id="nav">
+            <p>Cum enim magna parturient</p>
+        </div>
+        <a href="#nav2"><span>-</span></a>
+        <div class="expandable" id="nav2">
+            <p></p>
+        </div>
+    </div> 
+</body>
+</html>

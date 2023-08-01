@@ -79,6 +79,28 @@ header .submenu a:hover {
     height: 150px;
 }
 
+#submenu {
+    display: block;
+    position: absolute;
+    width: 110px;
+    display: none;
+    background: transparent;
+    line-height: 2em; 
+}
+
+#menutitle:hover + #submenu {
+    display: block; 
+    -webkit-transition: height 1s ease;
+    -moz-transition: ease-in 2s none;
+    -ms-transition: ease-in  2s none;
+    -o-transition: ease-in  2s none;
+    transition: ease-in  2s none;  
+}
+
+#menutitle { 
+    font-size: 1px;
+}
+
 
 /*=====main=====*/
 
