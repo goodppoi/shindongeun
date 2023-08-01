@@ -6,11 +6,12 @@
 
 5.
  인스타그램 호버 시 아이콘 뜨게 하기 -> button transition 참고하기
-file:///C:/Users/iibi/Desktop/%EC%8B%A0%EB%8F%99%EC%9D%80/CSS/css3%20%EC%86%8D%EC%84%B1/5.transition/delay_button.html
+view-source:file:///C:/Users/iibi/Desktop/%EC%8B%A0%EB%8F%99%EC%9D%80/CSS/css3%20%EC%86%8D%EC%84%B1/5.transition/delay_button.html
 
 
 6-1 온라인마켓 호버 시 4개 스토어 메뉴 내려오게 슬라이드 + script
-6-2 more click slide
+
+6-2 more click slide 1020*620
 
 
 
