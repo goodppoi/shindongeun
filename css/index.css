@@ -5,7 +5,7 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 
 /*====header====*/
@@ -100,6 +100,8 @@ header .submenu a:hover {
 #menutitle { 
     font-size: 1px;
 }
+
+a{font-size: 14px;}
 
 
 /*=====main=====*/
@@ -536,40 +538,6 @@ h4 {
     z-index: 9999;
 }
 
-.btn {
-    position: absolute;
-    left: 50%; bottom:1%;
-    transform: translate(-50%,-50%);
-    width: 250px; height: 80px;
-    line-height: 80px;
-    border: 2px solid #CD2827;
-    font-size: 40px;
-    color:#CD2827;
-    cursor: pointer;
-    background: #fff /* 버튼 배경색 제거 */
-}
-
-.btn::before {
-    position: absolute;
-    left: 35%; bottom:1%;
-    content: '+';
-    width: 0%; height: 100%;
-    transition: width 0.5s;
-}
-
-.btn:hover::before {
-    width: 100%;
-}
-
-.btn > .more {
-    color:#CD2827;
-    position: absolute;
-    left: 0%; top:0;
-    width: 100%; /* span 가로크기 주면 가운데 정렬 됨. */
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
 /*펼치기 넣어야함*/
 .btn  a {
     color:#CD2827;
@@ -583,6 +551,24 @@ h4 {
     transition-delay: 0.2s;
 }
 
+
+.btn {
+    position: absolute;
+    left: 40%; bottom:37%;
+    width: 250px; height: 80px;
+    line-height: 80px;
+    border: 2px solid #CD2827;
+    font-size: 40px;
+    color:#CD2827;
+    cursor: pointer;
+    background: #fff /* 버튼 배경색 제거 */
+}
+
+.b { 
+    display: none; 
+    height: 620px; 
+    background-color: #fff; 
+}
 /* instagram */
 
 .sns {
@@ -621,10 +607,6 @@ h4 {
     opacity: 50%;
 }
 
-.insta4:nth-child(3) a:hover {
-    
-}
-
 .comment-box .photo3 {
     position: relative;
 }
@@ -653,7 +635,6 @@ h4 {
     width: 100%; /* 가로 크기 */
     transition: all 2s; /* left, right, all */
 }
-
 
 
 /*=====footer=====*/

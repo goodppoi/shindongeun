@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * { margin:0; padding:0; }
-body { font-family: sans-serif;} 
-#content { margin: 50px; } 
-a { text-decoration: none; }  
+    * { 
+            margin:0; 
+            padding:0; 
+    }
+    body { 
+        font-family: sans-serif;
+    } 
+    #content { 
+        margin: 50px; 
+    } 
+    a { 
+        text-decoration: none; 
+    }  
 
-.expandable {
+    .expandable {
     background: #fff;
     overflow: hidden;
     color: #000;   
-    line-height: 50px;
+    line-height: 620px;
 
     transition: all .5s ease-in-out;
     height: 0;
 }
 
-.expandable:target {
-    height: 50px;
+    .expandable:target {
+    height: 30px;
 }
     </style>
     <title>slide-down</title>
@@ -29,7 +38,33 @@ a { text-decoration: none; }
     <div id="content"> 
         <a href="#nav"><span>+</span></a>
         <div class="expandable" id="nav">
-            <p>Cum enim magna parturient</p>
+            <div class="customer4">
+                <div class="inbox">
+                    <img src="./images/review_4.drink.png" alt="drink">
+                </div>
+            </div>
+            <div class="customer-txt">
+                <img src="./images/review_box2.png" alt="review-box">
+                <p>호지티 라떼에 또 한 번 반했어요! 은근 파는 곳이 없어서 방문하는 카페마다 메뉴판을 유심히 살피는데
+                    새들러하우스는 인기메뉴라니>_< 진하고 무거운 느낌에 바디감있는 라떼를 좋아하는 제겐 딱^3^
+                    먹짱인 제겐 참을 수 없는 메뉴에요 히힛
+                </p>
+                <span class="star4">단골고객 ㉾㉾㉾님</span>
+            </div>
+        </div>    
+        <div class="customer">
+            <div class="customer5">
+                <div class="inbox">
+                    <img src="./images/review_5.waffle.png" alt="waffle">
+                </div>
+                </div>
+            <div class="customer-txt">
+                <img src="./images/review_box.png" alt="review-box">
+                <p>집에서 시도했다가 굽기도 색상도 제대로 못살려 망한적이 있는데 역시 예쁘게 만들어주신 컬러믹스 와플!!
+                    우리 아이들이 정말 좋아해요~ 어쩌면 제가 애들보다 더 잘 먹는 거 같아요~ 예쁘면서 맛도 좋은 디저트로 손님 접대용으로도 안성맞춤이에요^^
+                </p>
+                <span class="star5">단골고객 ◇◇◇님</span>
+            </div>
         </div>
         <a href="#nav2"><span>-</span></a>
         <div class="expandable" id="nav2">
