@@ -14,8 +14,10 @@ header {
     position: relative;
     width: 1180px;
     height: 1600px;
+    margin: 0 auto;
     background: url(../images/header_image.jpg) no-repeat center top;
     background-size: cover;
+    
 }
 
 /* flex-container */
@@ -80,28 +82,22 @@ header .submenu a:hover {
 
 /*=====main=====*/
 
-
-.introduce > h2 {
-    margin-top: 190px;
-    margin-bottom: 58px;
-    padding-left: 10px;
-}
-/* sinsa */
-.introduce {
-    position: relative;
-}
-
-.introduce .wrapper {
+.our-stores {
     display: flex;
 }
 
-.sinsa {
-    display: flex;
+.our-introduce > h2 {
+    margin-top: 135px;
+    margin-bottom: 50px;
+    padding: 30px 0 30px 0;
+    background-color: #fff;
 }
-.introduce .sinsa {
+
+.sinsa-img {
     width: 50%;
 }
-.introduce .sinsa-txt {
+
+.sinsa-txt {
     width: 50%;
     left: 180px; top: 210px;
     text-align: left;
@@ -109,29 +105,75 @@ header .submenu a:hover {
     padding-top: 158px;
     padding-left: 80px;
 }
-.introduce .sinsa-txt > p {
+
+.sinsa-txt > p {
     line-height: 2.4;
 }
-.introduce .sinsa-txt .map-icon {
+
+.sinsa-txt .map-icon {
     position: absolute;
-    top: 225px; right: 100px;
+    top: 368px; right: 100px;
 }
-.introduce .sinsa-txt .phone-icon {
+.sinsa-txt .phone-icon {
     position: absolute;
-    top: 300px; right: 300px;
+    top: 445px; right: 300px;
 }
-.introduce .icon {
+
+.icon {
     position: absolute;
     right: 71px;
     bottom: 160px;
 }
-.introduce .icon > img {
+.icon > img {
     padding-left: 20px;
 }
 
-/* galleria */
+/* css order */
+.our-jeju {
+    display: flex;
+}
 
-.introduce .glleria-txt {
+.jeju-box {
+    width: 100%;
+}
+
+
+.jeju-txt {
+    left: 180px; top: 210px;
+    text-align: left;
+    color: #000;
+    padding-top: 158px;
+    padding-left: 40px;
+}
+
+.jeju-txt .jeju-map {
+    position: absolute;
+    top: 974px; left: 328px; 
+}
+
+.jeju-txt .jeju-phone {
+    position: absolute;
+    top: 1050px; left: 235px;
+} 
+.jeju-txt > p {
+    font-size: 16px;
+    line-height: 2.4;
+}
+
+.jeju-txt > strong {
+    margin-bottom: 30px;
+}
+
+.jeju-txt > h3 {
+    padding-top: 10px;
+}
+
+/* galleria */    
+.our-gall {
+    display: flex;
+}
+
+.glleria-txt {
     width: 50%;
     left: 180px; top: 210px;
     text-align: left;
@@ -140,63 +182,16 @@ header .submenu a:hover {
     padding-top: 158px;
     padding-left: 50px;
 }
-.introduce .glleria-txt > p {
+.glleria-txt > p {
     line-height: 1.8;
 }
-.introduce .g-icon {
+.g-icon {
     position: absolute;
-    top: 245px; right: 50px;
+    top: 1575px; right: 50px;
 }
-.introduce .g-phone {
+.g-phone {
     position: absolute;
-    top: 305px; right: 330px;
-}
-
-/* jeju */
-
-
-.introduce2 .jeju-txt .jeju-map {
-    position: absolute;
-    top: 225px; right: 250px;
-}
-.introduce2 .jeju-txt .jeju-phone {
-    position: absolute;
-    top:300px; right: 348px;
-}
-.introduce2 .jeju-txt > p {
-    font-size: 16px;
-    line-height: 2.4;
-}
-.introduce2 {
-    position: relative;
-}
-.introduce2 .wrapper {
-    display: flex;
-}
-.introduce2 .jeju {
-    width: 50%;
-}
-.introduce2 .jeju-txt {
-    width: 50%;
-    left: 180px; top: 210px;
-    text-align: left;
-    color: #000;
-    padding-top: 158px;
-    padding-left: 40px;
-}
-.introduce .jeju-txt > strong {
-    margin-bottom: 30px;
-}
-.introduce .jeju-txt > p {
-    font-size: 16px;
-}
-.introduce2 .icon {
-    position: absolute;
-    right: 83px;
-    bottom: 160px;
-}
-.introduce2 .icon > img {
-    padding-left: 20px;
+    top: 1630px; right: 330px;
 }
 
 
@@ -444,6 +439,14 @@ h4 {
     order: 1;
 }
 
+.customer4:nth-child(1) {
+    order: 2;
+}
+
+.customer4:nth-child(2) {
+    order: 1;
+}
+
 .customer2 .customer-txt {
     width: 700px;
     height: 210px;
@@ -474,14 +477,33 @@ h4 {
     background: url(../images/review_box.png) no-repeat; 
 }
 
+.customer-txt > img {
+    position: absolute;
+}
+
 .customer-txt > p {
+    position: absolute;
     width: 640px;
     padding-left: 63px;
     padding-top: 20px;
 }
 
-.customer-txt > span {
-    padding-left: 475px;
+.customer-txt > .star1 {
+    position: absolute;
+    top: 355px;
+    padding-left: 450px;
+}
+
+.customer-txt > .star2 {
+    position: absolute;
+    top: 640px;
+    padding-left: 425px;
+}
+
+.customer-txt > .star3 {
+    position: absolute;
+    top: 920px;
+    padding-left: 450px;
 }
 
 .hidden-review {
