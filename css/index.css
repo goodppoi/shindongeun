@@ -5,7 +5,7 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    /* background-color: skyblue; */
+    background-color: skyblue;
 }
 
 /*====header====*/
@@ -357,6 +357,8 @@ h4 {
     font-weight: 300;
 }
 
+/* line-trough가격 바뀐곳에 넣기*/
+
 .bun {
     background: url(../images/menu-category1.png) no-repeat;
     background-position: 50px 0;
@@ -619,48 +621,71 @@ h4 {
 
 .sns p > a:hover {
     color: aqua;
+    text-shadow: #000 1 1;
 }
 
 .insta4 {
     display: flex;
+    justify-content: space-between;
 }
 
 .insta4 img {
     width: 275px; height: 275px;
-    margin-right: 26.6px;
+
 }
-.insta4 a:hover {
+/* .insta4 a:hover {
     opacity: 50%;
-}
+} */
 
-.comment-box .photo3 {
+
+.comment-box {
     position: relative;
+    width: 275px; height: 275px;
+    overflow: hidden;
 }
 
-.insta-icon {
+.comment-box::before {
     position: absolute;
-    left: 0;
+    left: 0; top: 0; /* left, right, top, bottom 방향 전환 가능 */
+    content: '';
+    width: 100%; /* 가로 크기 */
+    height: 100%;
+    background-color: #000;
+    
+    opacity: 0;
+    transition: all 2s; /* left, right, all */
+}
+.comment-box:hover::before {
+    opacity: 0.3;
+}
+
+.comment-box .insta-icon {
+    position: absolute;
+    top: 50%;
+    width: 180px; height: 40px;
+    line-height: 40px;
+    transform: translate(-50%, -50%);
     text-align: center;
+    
+
+    left: -300px;
+    transition: all 2s;
 }
 
-.insta-icon img {
-    width: 10%;
-    height: 10%;
+.comment-box:hover .insta-icon {
+    left: 50%;
 }
 
-.insta-icon > p {
+.comment-box .insta-icon img {
+    width: 30px; height: 27px;  
+}
+
+.comment-box .insta-icon > span {
     color: white;
     font-weight: 600;
 }
 
 
-.comment-box ::before {
-    position: absolute;
-    left: 0; top: 0; /* left, right, top, bottom 방향 전환 가능 */
-    content: '';
-    width: 100%; /* 가로 크기 */
-    transition: all 2s; /* left, right, all */
-}
 
 
 /*=====footer=====*/
