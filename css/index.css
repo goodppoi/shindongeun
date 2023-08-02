@@ -99,6 +99,7 @@ header .submenu a:hover {
 
 #menutitle { 
     font-size: 1px;
+    text-align: center;
 }
 
 #submenu  a {
@@ -122,7 +123,7 @@ header .submenu a:hover {
 .sinsa-txt > .icon {
     position: absolute;
     right: 71px;
-    top: 540px; 
+    top: 600px; 
 }
 
 .sinsa-img {
@@ -154,7 +155,7 @@ header .submenu a:hover {
 .icon {
     position: absolute;
     right: 71px;
-    bottom: 160px;
+    bottom: 100px;
 }
 .icon > img {
     padding-left: 20px;
@@ -257,8 +258,8 @@ header .submenu a:hover {
     grid-gap: 10px 10px;
     margin-bottom: 112px;
     height: 1800px;
-    background: url(../images/main_background_image.jpg) no-repeat fixed;
-    background-size: cover;
+    background: url(../images/main_background_image.jpg) no-repeat center fixed;
+    background-size: 1200px;
 }
 
 h2 {
