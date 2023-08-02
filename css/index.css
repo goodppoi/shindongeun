@@ -101,7 +101,9 @@ header .submenu a:hover {
     font-size: 1px;
 }
 
-a{font-size: 14px;}
+#submenu  a {
+    font-size: 13px;
+}
 
 
 /*=====main=====*/
@@ -115,6 +117,12 @@ a{font-size: 14px;}
     margin-bottom: 50px;
     padding: 30px 0 30px 0;
     background-color: #fff;
+}
+
+.sinsa-txt > .icon {
+    position: absolute;
+    right: 71px;
+    top: 540px; 
 }
 
 .sinsa-img {
@@ -161,13 +169,18 @@ a{font-size: 14px;}
     width: 100%;
 }
 
-
 .jeju-txt {
     left: 180px; top: 210px;
     text-align: left;
     color: #000;
     padding-top: 158px;
     padding-left: 40px;
+}
+
+.jeju-box > .icon {
+    position: absolute;
+    left: 390px;
+    top: 1200px; 
 }
 
 .jeju-txt .jeju-map {
@@ -527,6 +540,18 @@ h4 {
 .customer-txt > .star3 {
     position: absolute;
     top: 920px;
+    padding-left: 450px;
+}
+
+.customer-txt > .star4 {
+    position: absolute;
+    bottom: 370px;
+    padding-left: 450px;
+}
+
+.customer-txt > .star5 {
+    position: absolute;
+    bottom: 90px;
     padding-left: 450px;
 }
 

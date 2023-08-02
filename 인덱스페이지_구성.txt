@@ -244,16 +244,3 @@ a* instagram / background-color: white;
 		<span>고양이 줄리 안녕!</span>
 	</div>
 ----------------------------------------------------
-
-<FOOTER>
-
-1)
-사업자정보 -> w: 1200 h: 84  / 좌우 간격 : 20 , ~ / background-color: white;
-                    내용1 : font: 16px, background-color: gray;
-		address, a, tel -> hover : underline
- 	    내용2 : font: 16px, 
-		address, a, tel -> hover : underline
-	    내용3 : font: 14px
-
-		top 메뉴 고정
-
