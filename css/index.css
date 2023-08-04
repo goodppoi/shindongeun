@@ -229,8 +229,17 @@ header .submenu a:hover {
     color:#fff;
     margin-top: 135px;
 }
-.play .frame {
+
+.play img {
+    width:1080px; 
+    height:650px;
     margin-left: 50px;
+    background-color: #000;
+    }
+
+.play img:hover {
+    opacity: 75%;
+    cursor: pointer;
 }
 
 /* menu */
