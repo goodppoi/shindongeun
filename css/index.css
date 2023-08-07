@@ -80,7 +80,7 @@ header .submenu a:hover {
 }
 
 #submenu {
-    display: block;
+    display: block; /* 숨기기 */
     position: absolute;
     width: 110px;
     display: none;
@@ -124,8 +124,9 @@ header .submenu a:hover {
     right: 71px;
     top: 600px; 
 }
-.sinsa-img {
-    width: 50%;
+/* 8월7일 박스 안에서 스케일 커지게 조정 */
+.sinsa-img:hover {
+    transform: scale(1.2);
 }
 .sinsa-txt {
     width: 50%;
@@ -475,7 +476,9 @@ h4 {
     background: url(../images/review_box2.png) no-repeat;
 }
 
-
+/* 8월7일 리뷰박스 스케일에 트랜지션 딜레이 넣기 */
+/* .customer2 > .inbox { */
+    /* transition: width 0.5s;} */
 .inbox {
     position: absolute;
     left: 0; top: 0;
@@ -540,16 +543,11 @@ h4 {
 }
 
 /*펼치기 넣어야함*/
-.btn  a {
-    color:#CD2827;
-    z-index: 1;
-}
 
-.btn > .more:hover {
-    color:#CD2827;
-    font-weight: 600;
-    opacity: 1;
-    transition-delay: 0.2s;
+.btn:hover {
+    color:#FFF;
+    background-color: #CD2827;
+    transition-delay: 0.1s;
 }
 
 .btn {
